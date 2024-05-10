@@ -1,8 +1,9 @@
 import { Contact, Footer } from "./sections";
+import { Nav } from "./components";
 
 const App = () => (
   <main className="relative">
-    NAV
+    <Nav />
     <section className="xl:padding-1-wide wide:padding-r padding-b">
       Hero -ish section
     </section>
