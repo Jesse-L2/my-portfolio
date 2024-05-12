@@ -5,12 +5,13 @@ const App = () => (
   <main className="relative">
     <Nav />
     <section className="xl:padding-1-wide wide:padding-r padding-b">
-      Hero -ish section
+      Bio Section
     </section>
     <section className="padding">Projects</section>
-    <section className="padding">Other Section</section>
-    <section className="padding">Check it out</section>
-    <section className="padding">Footer</section>
+    <section className="padding">My Skills</section>
+    <section className="padding">Education</section>
+    <section className="padding">Social Media & Github</section>
+    <section className="padding">Footer w/ Contact Me</section>
   </main>
 );
 
