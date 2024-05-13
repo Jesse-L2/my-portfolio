@@ -5,17 +5,17 @@ import css_icon from "./css_icon.png";
 import email from "./email.png";
 import facebook from "./facebook.svg";
 import git from "./git.png";
-import hamburger from "./hamburger.svg";
+import hamburgerIcon from "./hamburgerIcon.svg";
 import html from "./html.png";
 import instagram from "./instagram.svg";
 import javascript from "./javascript.png";
-import node from "./node.svg";
-import python from "./python.svg";
+import node from "./node.png";
+import python from "./python.png";
 import react from "./react.png";
 import sass from "./sass.png";
 import skype from "./skype.png";
 import twitter from "./twitter.svg";
-import typescript from "./typescript.svg";
+import typescript from "./typescript.png";
 
 export {
   arrow_right,
@@ -25,7 +25,7 @@ export {
   email,
   facebook,
   git,
-  hamburger,
+  hamburgerIcon,
   html,
   instagram,
   javascript,
