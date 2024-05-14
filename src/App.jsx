@@ -8,12 +8,11 @@ const App = () => (
     <section className="xl:padding-1-wide wide:padding-r padding-b">
       Bio Section
     </section>
-    <section className="padding">Portfolio of Projects</section>
-    <section className="padding">My Skills</section>
-    <section className="padding">Education</section>
     <section className="padding">About Me</section>
-    <section className="padding">Blog Section</section>
-    <section className="padding">Social Media & Github</section>
+    <section className="padding">Education</section>
+    <section className="padding">My Skills</section>
+    <section className="padding">Projects</section>
+    <section className="padding">Resume</section>
     <section className="padding">Footer w/ Contact Me</section>
   </main>
 );
