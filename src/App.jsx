@@ -2,7 +2,7 @@ import { About, Education, Footer, Skills, Projects } from "./sections";
 import { Nav } from "./components";
 
 const App = () => (
-  <main className="relative background-color: bg-main-bg ">
+  <main className="relative background-color: bg-slate-100 ">
     <Nav />
 
     <section className="xl:padding-1-wide wide:padding-r padding-b ">
