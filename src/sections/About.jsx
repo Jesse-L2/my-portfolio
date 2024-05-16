@@ -1,7 +1,7 @@
 const Bio = () => {
   return (
     <section>
-      <div>
+      <div className="mt-16">
         <p>Bio</p>
       </div>
     </section>

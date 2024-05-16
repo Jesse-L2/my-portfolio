@@ -1,13 +1,9 @@
 import { About, Education, Footer, Skills, Projects } from "./sections";
-import { Nav } from "./components";
+import { Navigation } from "./components";
 
 const App = () => (
   <main className="relative background-color: bg-slate-100 ">
-    <Nav />
-
-    <section className="xl:padding-1-wide wide:padding-r padding-b ">
-      Bio Section
-    </section>
+    <Navigation />
     <section className="padding">
       <About />
       <Education />

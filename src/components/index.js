@@ -1,2 +1,3 @@
-import Nav from "./Nav";
-export { Nav };
+import Navigation from "./Navigation";
+
+export { Navigation };
