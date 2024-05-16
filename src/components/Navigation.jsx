@@ -43,7 +43,7 @@ const Navigation = () => {
   const { height } = useDimensions(containerRef);
   return (
     <header className="absolute w-full padding-x py-8 z-10 background-color: bg-slate-400">
-      <nav className="flex justify-between items-center max-container">
+      <nav className="flex justify-between items-center max-container bg-slate-500">
         <ul className="flex justify-center items-center gap-20 max-lg:hidden">
           <a className="rounded-full" href="/">
             <img
@@ -70,11 +70,11 @@ const Navigation = () => {
           ref={containerRef}
         >
           <motion.div
-            className="absolute w-[300px] left-0 inset-y-0 background-color: #fff"
+            className="background absolute w-[300px] left-0 inset-y-0 background-color: #fff"
             variants={sidebar}
           />
 
-          <MenuToggle className="padding" toggle={() => toggleOpen()} />
+          <MenuToggle className="" toggle={() => toggleOpen()} />
         </motion.nav>
 
         <motion.ul variants={variants}>

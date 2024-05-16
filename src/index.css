@@ -60,3 +60,7 @@
 .switch[data-isOn="true"] {
   @apply justify-end;
 }
+
+nav {
+  padding: 2rem;
+}
