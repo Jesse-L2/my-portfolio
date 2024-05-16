@@ -56,3 +56,7 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
+
+.switch[data-isOn="true"] {
+  @apply justify-end;
+}

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import { navLinks } from "../constants";
 
 const variants = {
   open: {
@@ -18,22 +19,29 @@ const variants = {
   },
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
+const colors = [
+  "#FF008C",
+  "#D309E1",
+  "#9C1AFF",
+  "#7700FF",
+  "#4400FF",
+  "#D308E1",
+];
 
 export const MenuItem = ({ i }) => {
-  const style = { border: `4px solid ${colors[i]}` };
+  const style = { border: `2px solid ${colors[i]}` };
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 1.0 }}
     >
-      <div className="icon-placeholder" style={style}>
-        test
-      </div>
-      <div className="text-placeholder" style={style}>
-        Test
-      </div>
+      <div
+        className="w-10 h-10 flex-[40px_0] mr-5 rounded-[50%]"
+        style={style}
+      ></div>
+      <div className="w-[200px] h-5 flex-1 rounded-[5px]" style={style} />
+      Text
     </motion.li>
   );
 };

@@ -9,10 +9,10 @@ import { useRef } from "react";
 
 const variants = {
   open: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    transition: { staggerChildren: 0.15, delayChildren: 0.3 },
   },
   closed: {
-    transition: { staggerChildren: 0.1, staggerDirection: -1 },
+    transition: { staggerChildren: 0.15, staggerDirection: -1 },
   },
 };
 
@@ -62,9 +62,12 @@ const Navigation = () => {
           custom={height}
           ref={containerRef}
         >
-          <motion.div className="background" variants={sidebar} />
+          <motion.div
+            className="absolute w-[300px] left-0 inset-y-0 background-color: #fff"
+            variants={sidebar}
+          />
           <div className="hidden max-lg:block">
-            <img src={hamburgerIcon} alt="Menu" width={44} height={44} />
+            {/* <img src={hamburgerIcon} alt="Menu" width={44} height={44} /> */}
           </div>
           <MenuToggle className="padding" toggle={() => toggleOpen()} />
         </motion.nav>
