@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
-import { navLinks } from "../constants";
+import { navLinks } from "../constants/navLinks";
 
 const variants = {
   open: {
@@ -19,29 +19,26 @@ const variants = {
   },
 };
 
-const colors = [
-  "#FF008C",
-  "#D309E1",
-  "#9C1AFF",
-  "#7700FF",
-  "#4400FF",
-  "#D308E1",
-];
+const getNavLinkByID = (id) => {
+  // Helper function to return the right navLink based on i
+  return navLinks.find((link) => link.id === id);
+};
 
 export const MenuItem = ({ i }) => {
-  const style = { border: `2px solid ${colors[i]}` };
+  const style = {};
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 1.0 }}
     >
-      <div
-        className="w-10 h-10 flex-[40px_0] mr-5 rounded-[50%]"
+      <a
+        href={getNavLinkByID(i).href}
+        className="text-xl w-35 h-12 flex-1 flex rounded-[4px] p-4 hover:text-blue-800"
         style={style}
-      ></div>
-      <div className="w-[200px] h-5 flex-1 rounded-[5px]" style={style} />
-      Text
+      >
+        {getNavLinkByID(i).label}
+      </a>
     </motion.li>
   );
 };

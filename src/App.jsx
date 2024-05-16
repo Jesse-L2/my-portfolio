@@ -2,7 +2,7 @@ import { About, Education, Footer, Skills, Projects } from "./sections";
 import { Navigation } from "./components";
 
 const App = () => (
-  <main className="relative background-color: bg-slate-100 ">
+  <main className="relative background-color: bg-slate-600 ">
     <Navigation />
     <section className="padding">
       <About />

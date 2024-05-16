@@ -1,11 +1,12 @@
 import { hd_Logo } from "../assets/logo";
-import { hamburgerIcon } from "../assets/icons";
-import { navLinks } from "../constants";
+// import { hamburgerIcon } from "../assets/icons";
+import { navLinks } from "../constants/navLinks";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { MenuItem } from "./MenuItem";
 import { useRef } from "react";
+// import Switch from "./Switch/Switch";
 
 const variants = {
   open: {
@@ -36,23 +37,29 @@ const sidebar = {
   },
 };
 
-const itemIds = [0, 1, 2, 3, 4, 5];
-
 const Navigation = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   return (
-    <header className="absolute w-full padding-x py-8 z-10 background-color: bg-white">
+    <header className="absolute w-full padding-x py-8 z-10 background-color: bg-slate-400">
       <nav className="flex justify-between items-center max-container">
-        <a className="" href="/">
-          <img src={hd_Logo} alt="Logo" width={150} height={50} />
-        </a>
+        <ul className="flex justify-center items-center gap-20 max-lg:hidden">
+          <a className="rounded-full" href="/">
+            <img
+              className="rounded-full"
+              src={hd_Logo}
+              alt="Logo"
+              width={150}
+              height={100}
+            />
+          </a>
 
-        <ul className="flex flex-1 justify-center items-center gap-12 max-lg:hidden">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a href={link.href}>{link.label}</a>
+              <a className="text-xl hover:text-blue-800" href={link.href}>
+                {link.label}
+              </a>
             </li>
           ))}
         </ul>
@@ -66,18 +73,17 @@ const Navigation = () => {
             className="absolute w-[300px] left-0 inset-y-0 background-color: #fff"
             variants={sidebar}
           />
-          <div className="hidden max-lg:block">
-            {/* <img src={hamburgerIcon} alt="Menu" width={44} height={44} /> */}
-          </div>
+
           <MenuToggle className="padding" toggle={() => toggleOpen()} />
         </motion.nav>
 
         <motion.ul variants={variants}>
-          {itemIds.map((i) => (
-            <MenuItem i={i} key={i} />
+          {navLinks.map((navLink) => (
+            <MenuItem i={navLink.id} key={navLink.id} />
           ))}
         </motion.ul>
       </nav>
+      <div>{/* <Switch /> */}</div>
     </header>
   );
 };

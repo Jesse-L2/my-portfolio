@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+const spring = {
+  type: "spring",
+  stiffness: 700,
+  damping: 30,
+};
+
 export default function Switch() {
   const [isOn, setIsOn] = useState(false);
 
@@ -20,9 +26,3 @@ export default function Switch() {
     </div>
   );
 }
-
-const spring = {
-  type: "spring",
-  stiffness: 700,
-  damping: 30,
-};
