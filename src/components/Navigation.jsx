@@ -57,33 +57,33 @@ const Navigation = () => {
   return (
     <header className="absolute w-full padding-x py-8 z-10 background-color: bg-slate-400">
       <nav className="flex justify-between items-center max-container bg-slate-500">
+        <a className="rounded-full min-h-[100px] min-w-[100px]" href="/">
+          <img
+            className="rounded-full"
+            src={hd_Logo}
+            alt="Logo"
+            width={100}
+            height={100}
+          />
+        </a>
         <ul className="flex justify-center items-center gap-20 max-lg:hidden">
-          <a className="rounded-full" href="/">
-            <img
-              className="rounded-full"
-              src={hd_Logo}
-              alt="Logo"
-              width={150}
-              height={100}
-            />
-          </a>
-
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a className="text-xl hover:text-blue-800" href={link.href}>
+              <a className="text-xl hover:text-blue-600" href={link.href}>
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
         <motion.nav
+          className=""
           initial={false}
           animate={isMenuOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
         >
           <motion.div
-            className="background absolute w-[300px] left-0 inset-y-0 background-color: #fff"
+            className="background absolute w-[300px]  bg-slate-100 bg-transparent "
             variants={sidebar}
           />
 
@@ -94,7 +94,10 @@ const Navigation = () => {
           />
         </motion.nav>
         {isMenuOpen && (
-          <motion.ul variants={variants}>
+          <motion.ul
+            className="m-0 p-0 bg-slate-100 flex-column left-0"
+            variants={variants}
+          >
             {navLinks.map((navLink) => (
               <MenuItem i={navLink.id} key={navLink.id} />
             ))}

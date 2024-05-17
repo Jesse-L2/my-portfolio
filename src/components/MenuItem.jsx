@@ -34,7 +34,7 @@ export const MenuItem = ({ i }) => {
     >
       <a
         href={getNavLinkByID(i).href}
-        className="text-xl w-35 h-12 flex-1 flex rounded-[4px] p-4 hover:text-blue-800"
+        className="text-xl w-35 h-12 flex-1 flex rounded-[4px] p-4 hover:text-blue-800 "
         style={style}
       >
         {getNavLinkByID(i).label}

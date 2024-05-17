@@ -13,10 +13,10 @@ const Path = (props) => (
 
 export const MenuToggle = ({ toggle, isMenuOpen, setIsMenuOpen }) => (
   <button
-    className="hidden max-lg:block cursor-pointer absolute w-[50px] h-[50px] rounded-[50%] border-[none] left-[6rem] top-[5rem] "
+    className="hidden max-lg:block cursor-pointer w-[50px] h-[50px] rounded-[50%] border-[none] top-[5rem] absolute content-end self-end left-[80%]"
     onClick={() => setIsMenuOpen(!isMenuOpen)}
   >
-    <svg width="70" height="70" viewBox="0 0 70 70">
+    <svg width="100" height="100" viewBox="0 0 30 30">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
