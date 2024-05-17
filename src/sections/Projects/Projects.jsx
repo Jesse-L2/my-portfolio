@@ -6,7 +6,7 @@ const Projects = () => {
       </div>
       <div>
         <div className="grid-cols-1 sm:grid md:grid-cols-3 ">
-          <div className="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
+          <div className="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0 hover:shadow-xl">
             <a href="#!">
               <img
                 className="rounded-t-lg"
@@ -15,7 +15,7 @@ const Projects = () => {
               />
             </a>
             <div className="p-6">
-              <h5 className="mb-2 text-xl font-medium leading-tight text-black">
+              <h5 className="mb-2 text-xl font-medium leading-tight text-black text-center">
                 Card title
               </h5>
               <p className="mb-4 text-base text-black">

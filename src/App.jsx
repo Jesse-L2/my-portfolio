@@ -1,4 +1,5 @@
-import { About, Education, Footer, Skills, Projects } from "./sections";
+import { About, Education, Footer, Skills } from "./sections";
+import { Projects } from "./sections/Projects";
 import { Navigation } from "./components";
 
 const App = () => (

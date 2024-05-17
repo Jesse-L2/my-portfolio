@@ -1,4 +1,4 @@
-import { hd_Logo } from "../assets/logo";
+// import { hd_Logo } from "../assets/logo";
 // import { hamburgerIcon } from "../assets/icons";
 import { navLinks } from "../constants/navLinks";
 import { motion, useCycle } from "framer-motion";
@@ -48,7 +48,7 @@ const Navigation = () => {
           <a className="rounded-full" href="/">
             <img
               className="rounded-full"
-              src={hd_Logo}
+              // src={hd_Logo}
               alt="Logo"
               width={150}
               height={100}
