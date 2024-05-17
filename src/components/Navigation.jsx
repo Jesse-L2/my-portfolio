@@ -45,6 +45,15 @@ const Navigation = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const handleWindowResive = () => {
+    // Handle situation where someone toggled nav but switched to fullscreen
+    if (window.innerWidth >= 1024) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  window.addEventListener("resize", handleWindowResive);
+
   return (
     <header className="absolute w-full padding-x py-8 z-10 background-color: bg-slate-400">
       <nav className="flex justify-between items-center max-container bg-slate-500">
