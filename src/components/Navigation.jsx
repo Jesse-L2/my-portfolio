@@ -1,4 +1,4 @@
-// import { hd_Logo } from "../assets/logo";
+import { hd_Logo } from "../assets/logo";
 // import { hamburgerIcon } from "../assets/icons";
 import { navLinks } from "../constants/navLinks";
 import { motion, useCycle } from "framer-motion";
@@ -6,6 +6,7 @@ import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { MenuItem } from "./MenuItem";
 import { useRef } from "react";
+import { useState } from "react";
 // import Switch from "./Switch/Switch";
 
 const variants = {
@@ -38,9 +39,12 @@ const sidebar = {
 };
 
 const Navigation = () => {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <header className="absolute w-full padding-x py-8 z-10 background-color: bg-slate-400">
       <nav className="flex justify-between items-center max-container bg-slate-500">
@@ -48,7 +52,7 @@ const Navigation = () => {
           <a className="rounded-full" href="/">
             <img
               className="rounded-full"
-              // src={hd_Logo}
+              src={hd_Logo}
               alt="Logo"
               width={150}
               height={100}
@@ -65,7 +69,7 @@ const Navigation = () => {
         </ul>
         <motion.nav
           initial={false}
-          animate={isOpen ? "open" : "closed"}
+          animate={isMenuOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
         >
@@ -74,16 +78,20 @@ const Navigation = () => {
             variants={sidebar}
           />
 
-          <MenuToggle className="" toggle={() => toggleOpen()} />
+          <MenuToggle
+            toggle={toggleMenu}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
+          />
         </motion.nav>
-
-        <motion.ul variants={variants}>
-          {navLinks.map((navLink) => (
-            <MenuItem i={navLink.id} key={navLink.id} />
-          ))}
-        </motion.ul>
+        {isMenuOpen && (
+          <motion.ul variants={variants}>
+            {navLinks.map((navLink) => (
+              <MenuItem i={navLink.id} key={navLink.id} />
+            ))}
+          </motion.ul>
+        )}
       </nav>
-      <div>{/* <Switch /> */}</div>
     </header>
   );
 };

@@ -11,10 +11,10 @@ const Path = (props) => (
   />
 );
 
-export const MenuToggle = ({ toggle }) => (
+export const MenuToggle = ({ toggle, isMenuOpen, setIsMenuOpen }) => (
   <button
     className="hidden max-lg:block cursor-pointer absolute w-[50px] h-[50px] rounded-[50%] border-[none] left-[6rem] top-[5rem] "
-    onClick={toggle}
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
   >
     <svg width="70" height="70" viewBox="0 0 70 70">
       <Path
@@ -43,4 +43,6 @@ export const MenuToggle = ({ toggle }) => (
 
 MenuToggle.propTypes = {
   toggle: PropTypes.func.isRequired,
+  isMenuOpen: PropTypes.bool.isRequired,
+  setIsMenuOpen: PropTypes.func.isRequired,
 };
