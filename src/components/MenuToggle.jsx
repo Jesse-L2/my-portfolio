@@ -11,7 +11,7 @@ const Path = (props) => (
   />
 );
 
-export const MenuToggle = ({ toggle, isMenuOpen, setIsMenuOpen }) => (
+export const MenuToggle = ({ isMenuOpen, setIsMenuOpen }) => (
   <button
     className="hidden max-lg:block cursor-pointer w-[50px] h-[50px] rounded-[50%] border-[none] top-[5rem] absolute content-end self-end left-[80%]"
     onClick={() => setIsMenuOpen(!isMenuOpen)}

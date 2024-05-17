@@ -1,7 +1,7 @@
 import { hd_Logo } from "../assets/logo";
 // import { hamburgerIcon } from "../assets/icons";
 import { navLinks } from "../constants/navLinks";
-import { motion, useCycle } from "framer-motion";
+import { motion } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { MenuItem } from "./MenuItem";
@@ -56,10 +56,15 @@ const Navigation = () => {
 
   return (
     <header className="absolute w-full padding-x py-8 z-10 background-color: bg-slate-400">
-      <nav className="flex justify-between items-center max-container bg-slate-500">
+      <motion.nav
+        className="flex max-container Wbg-slate-500"
+        style={{
+          className: isMenuOpen ? "W" : "justify-between",
+        }}
+      >
         <a className="rounded-full min-h-[100px] min-w-[100px]" href="/">
           <img
-            className="rounded-full"
+            className="rounded-full p-1 m-4"
             src={hd_Logo}
             alt="Logo"
             width={100}
@@ -81,6 +86,11 @@ const Navigation = () => {
           animate={isMenuOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
+          style={{
+            className: isMenuOpen
+              ? "justify-self-center left-[50%] right-[50%]"
+              : "justify-between",
+          }}
         >
           <motion.div
             className="background absolute w-[300px]  bg-slate-100 bg-transparent "
@@ -95,7 +105,7 @@ const Navigation = () => {
         </motion.nav>
         {isMenuOpen && (
           <motion.ul
-            className="m-0 p-0 bg-slate-100 flex-column left-0"
+            className="m-4 p-4 bg-slate-100 flex-column left-[50%] right-[50%] justify-center top-20 "
             variants={variants}
           >
             {navLinks.map((navLink) => (
@@ -103,7 +113,7 @@ const Navigation = () => {
             ))}
           </motion.ul>
         )}
-      </nav>
+      </motion.nav>
     </header>
   );
 };
