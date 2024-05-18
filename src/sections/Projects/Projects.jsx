@@ -4,7 +4,7 @@ import { projectData } from "../../data/projectData";
 const Projects = () => {
   return (
     <section className="flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-1 items-center justify-center">
         <p className="text-4xl font-bold mb-8">Projects</p>
         {projectData.map((project) => (
           <ProjectCard

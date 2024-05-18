@@ -1,5 +1,6 @@
 // import { projectData } from "../../data/projectData";
 import PropTypes from "prop-types";
+
 const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
   return (
     <div>
@@ -14,6 +15,18 @@ const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
             </h5>
             <p className="mb-4 text-base text-black">{description}</p>
           </div>
+          <a
+            href={link}
+            className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          >
+            View Project
+          </a>
+          <a
+            href={github}
+            className="inline-block bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded ml-4"
+          >
+            Source Code
+          </a>
         </div>
       </div>
     </div>
