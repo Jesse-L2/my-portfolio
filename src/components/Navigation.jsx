@@ -1,4 +1,4 @@
-import { hd_Logo } from "../assets/logo";
+// import { hd_Logo } from "../assets/logo";
 // import { hamburgerIcon } from "../assets/icons";
 import { navLinks } from "../constants/navLinks";
 import { motion } from "framer-motion";
@@ -55,9 +55,9 @@ const Navigation = () => {
   window.addEventListener("resize", handleWindowResive);
 
   return (
-    <header className="absolute w-full padding-x py-8 z-10 background-color: bg-slate-400">
+    <header className="absolute w-full padding-x py-8 z-10 background-color: bg-stone-300">
       <motion.nav
-        className="flex max-container Wbg-slate-500"
+        className="flex max-container bg-slate-500"
         style={{
           className: isMenuOpen ? "W" : "justify-between",
         }}
@@ -65,7 +65,7 @@ const Navigation = () => {
         <a className="rounded-full min-h-[100px] min-w-[100px]" href="/">
           <img
             className="rounded-full p-1 m-4"
-            src={hd_Logo}
+            // src={hd_Logo}
             alt="Logo"
             width={100}
             height={100}
@@ -74,7 +74,10 @@ const Navigation = () => {
         <ul className="flex justify-center items-center gap-20 max-lg:hidden">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a className="text-xl hover:text-blue-600" href={link.href}>
+              <a
+                className="text-xl hover:text-blue-600 hover:underline"
+                href={link.href}
+              >
                 {link.label}
               </a>
             </li>
