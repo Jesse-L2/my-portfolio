@@ -1,4 +1,4 @@
-const myLangs = ["Javascript", "Python"];
+const myLangs = ["Javascript", "Python", "Typescript"];
 const myFrontEnd = ["Bootstrap", "CSS", "SCSS", "TailwindCSS"];
 const myBackEnd = ["expressJS", "nodeJS", "Django", "Flask"];
 const myCloud = ["AWS", "Heroku", "Netlify", "Hostinger"];

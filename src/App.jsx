@@ -3,9 +3,9 @@ import { Projects } from "./sections/Projects";
 import { Navigation } from "./components";
 
 const App = () => (
-  <main className="relative bg-slate-600 ">
+  <main className="relative bg-slate-800 ">
     <Navigation />
-    <section className="padding bg-emerald-600">
+    <section className="padding">
       <About />
       <Education />
     </section>

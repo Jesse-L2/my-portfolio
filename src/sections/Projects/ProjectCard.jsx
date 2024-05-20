@@ -17,13 +17,13 @@ const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
           </div>
           <a
             href={link}
-            className="inline-block bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+            className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
           >
             View Project
           </a>
           <a
             href={github}
-            className="inline-block bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded ml-4"
+            className="inline-block rounded border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
           >
             Source Code
           </a>
