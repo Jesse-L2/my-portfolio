@@ -17,7 +17,7 @@ const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
           </div>
           <a
             href={link}
-            className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+            className="inline-block bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
           >
             View Project
           </a>
