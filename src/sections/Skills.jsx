@@ -1,4 +1,11 @@
-import { myLangs } from "../constants/mySkills";
+import {
+  myLangs,
+  myFrontEnd,
+  myBackEnd,
+  myCloud,
+  myDBs,
+  myTools,
+} from "../constants/mySkills";
 
 const Skills = () => {
   if (!myLangs.length) return null;
