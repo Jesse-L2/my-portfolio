@@ -12,19 +12,21 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="projects__container overflow-hidden rounded-lg transition flex items-center justify-center ">
-          {projectData.map((project) => (
-            <ProjectCard
-              key={project.id}
-              id={project.id}
-              title={project.title}
-              description={project.description}
-              img={project.img}
-              tags={project.tags}
-              link={project.link}
-              github={project.github}
-            />
-          ))}
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 hover:-translate-y-2">
+          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {projectData.map((project) => (
+              <ProjectCard
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                description={project.description}
+                img={project.img}
+                tags={project.tags}
+                link={project.link}
+                github={project.github}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

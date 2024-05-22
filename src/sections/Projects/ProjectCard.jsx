@@ -1,24 +1,48 @@
 import PropTypes from "prop-types";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
   return (
-    <>
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-        <div className="mx-auto max-w-lg text-center">
+    <div className="mx-auto max-w-lg text-center">
+      <a
+        className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/10"
+        href={id}
+      >
+        <a href={id}>
+          <img
+            className="rounded-t-lg min-w-full px-0 "
+            src={img}
+            alt={title}
+          />
+        </a>
+        <h2 className="mt-4 text-xl font-bold text-white">{title}</h2>
+        <p className="mt-1 text-sm text-gray-300">{description}</p>
+        <div className="tags mt-2 mx-auto gap-2 justify-center">
+          <ul>
+            {tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex mt-2 mx-auto gap-2 justify-center">
           <a
-            className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-            href={id}
+            href={github}
+            aria-label="source code"
+            className=" mx-2 hover:bg-gray-800 hover:rounded-md transition shadow-lg "
           >
-            <a href={id}>
-              <img className="rounded-t-lg" src={img} alt={title} />
-            </a>
-            <h2 className="mt-4 text-xl font-bold text-white">{title}</h2>
-
-            <p className="mt-1 text-sm text-gray-300">{description}</p>
+            <GitHubIcon />
+          </a>
+          <a
+            href={link}
+            aria-label="live view"
+            className="mx-2 hover:bg-gray-800 transition shadow-lg"
+          >
+            <LaunchIcon />
           </a>
         </div>
-      </div>
-    </>
+      </a>
+    </div>
   );
 };
 

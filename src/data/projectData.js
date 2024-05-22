@@ -2,7 +2,8 @@ export const projectData = [
   {
     id: 1,
     title: "Project 1",
-    description: "Project 1 description",
+    description:
+      "Project 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     img: "https://picsum.photos/200/300",
     tags: ["UI", "Frontend", "React", "Tailwindcss"],
     link: "www.example.com",
@@ -11,7 +12,8 @@ export const projectData = [
   {
     id: 2,
     title: "Project 2",
-    description: "Project 2 description",
+    description:
+      "Project 2 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     img: "https://picsum.photos/200/300",
     tags: ["Python", "Data Science"],
     link: "www.example.com",
@@ -20,7 +22,8 @@ export const projectData = [
   {
     id: 3,
     title: "Project 3",
-    description: "This is a description of Project 3.",
+    description:
+      "This is a description of Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     img: "https://picsum.photos/200/300",
     tags: ["JavaScript", "Node.js", "Express"],
     link: "https://example.com/project3",
@@ -29,7 +32,8 @@ export const projectData = [
   {
     id: 4,
     title: "Project 4",
-    description: "This is a description of Project 4.",
+    description:
+      "This is a description of Project 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     img: "https://picsum.photos/200/300",
     tags: ["Python", "Pygame"],
     link: "https://example.com/project4",
@@ -38,7 +42,8 @@ export const projectData = [
   {
     id: 5,
     title: "Project 5",
-    description: "This is a description of Project 5.",
+    description:
+      "This is a description of Project 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img: "https://picsum.photos/200/300",
     tags: ["Python", "Pygame"],
     link: "https://example.com/project5",
