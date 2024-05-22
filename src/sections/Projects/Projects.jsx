@@ -12,7 +12,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="projects__container overflow-hidden rounded-lg shadow transition hover:shadow-lg bg-white flex items-center justify-center ">
+        <div className="projects__container overflow-hidden rounded-lg transition flex items-center justify-center ">
           {projectData.map((project) => (
             <ProjectCard
               key={project.id}
@@ -26,7 +26,6 @@ const Projects = () => {
             />
           ))}
         </div>
-        <ProjectCard />
       </div>
     </section>
   );

@@ -5,8 +5,8 @@ export const projectData = [
     description: "Project 1 description",
     img: "https://picsum.photos/200/300",
     tags: ["UI", "Frontend", "React", "Tailwindcss"],
-    link: "",
-    github: "",
+    link: "www.example.com",
+    github: "www.github.com",
   },
   {
     id: 2,
@@ -14,8 +14,8 @@ export const projectData = [
     description: "Project 2 description",
     img: "https://picsum.photos/200/300",
     tags: ["Python", "Data Science"],
-    link: "",
-    github: "",
+    link: "www.example.com",
+    github: "www.github.com",
   },
   {
     id: 3,
