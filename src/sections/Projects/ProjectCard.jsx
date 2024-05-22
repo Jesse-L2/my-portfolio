@@ -4,7 +4,7 @@ import LaunchIcon from "@mui/icons-material/Launch";
 
 const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
   return (
-    <div className="mx-auto max-w-lg text-center">
+    <div className="mx-auto max-w-lg text-center hover:-translate-y-2">
       <a
         className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/10"
         href={id}
