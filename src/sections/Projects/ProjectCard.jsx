@@ -18,25 +18,28 @@ const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
         </a>
         <h2 className="mt-4 text-xl font-bold text-white">{title}</h2>
         <p className="mt-1 text-sm text-gray-300">{description}</p>
-        <div className="tags mt-2 mx-auto gap-2 justify-center">
-          <ul>
-            {tags.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
+        <div className="tags mt-4 flex flex-wrap gap-1 justify-center">
+          {tags.map((tag) => (
+            <span
+              className="whitespace-nowrap rounded-full bg-white hover:bg-pink-100 px-2.5 py-0.5 text-xs text-purple-700"
+              key={tag}
+            >
+              {tag}
+            </span>
+          ))}
         </div>
         <div className="flex mt-2 mx-auto gap-2 justify-center">
           <a
             href={github}
             aria-label="source code"
-            className=" mx-2 hover:bg-gray-800 hover:rounded-md transition shadow-lg "
+            className=" mx-2 hover:bg-gray-700 hover:rounded-md transition shadow-lg "
           >
             <GitHubIcon />
           </a>
           <a
             href={link}
             aria-label="live view"
-            className="mx-2 hover:bg-gray-800 transition shadow-lg"
+            className="mx-2 hover:bg-gray-700 transition shadow-lg"
           >
             <LaunchIcon />
           </a>
