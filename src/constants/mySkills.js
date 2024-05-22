@@ -1,8 +1,16 @@
 const myLangs = ["javascript", "python", "typescript"];
 const myFrontEnd = ["bootstrap", "css", "html", "scss", "tailwindcss"];
-const myBackEnd = ["expressjs", "nodejs", "django", "flask"];
+const myBackEnd = [
+  "expressjs",
+  "nodejs",
+  "django",
+  "flask",
+  "mongodb",
+  "sqlite",
+  "postgresql",
+  "sanity",
+];
 const myCloud = ["aws", "heroku", "netlify", "hostinger"];
-const myDBs = ["mongodb", "sqlite", "postgresql", "sanity"];
 const myTools = [
   "nginx",
   "postman",
@@ -14,4 +22,4 @@ const myTools = [
   "jupyternotebook",
 ];
 
-export { myLangs, myFrontEnd, myBackEnd, myCloud, myDBs, myTools };
+export { myLangs, myFrontEnd, myBackEnd, myCloud, myTools };
