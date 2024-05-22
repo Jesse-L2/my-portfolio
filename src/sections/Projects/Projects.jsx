@@ -3,21 +3,29 @@ import { projectData } from "../../data/projectData";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col items-center justify-center">
-      <div className="flex flex-1 items-center justify-center">
-        <p className="text-4xl font-bold mb-8">Projects</p>
-        {projectData.map((project) => (
-          <ProjectCard
-            key={project.id}
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            img={project.img}
-            tags={project.tags}
-            link={project.link}
-            github={project.github}
-          />
-        ))}
+    <section className="bg-gray-900 text-white">
+      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-lg text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl">My Projects</h2>
+          <p className="mt-4 text-gray-300">
+            Check out some of the cool things I built.
+          </p>
+        </div>
+
+        <div className="projects__container overflow-hidden rounded-lg shadow transition hover:shadow-lg bg-white flex items-center justify-center ">
+          {projectData.map((project) => (
+            <ProjectCard
+              key={project.id}
+              id={project.id}
+              title={project.title}
+              description={project.description}
+              img={project.img}
+              tags={project.tags}
+              link={project.link}
+              github={project.github}
+            />
+          ))}
+        </div>
         <ProjectCard />
       </div>
     </section>

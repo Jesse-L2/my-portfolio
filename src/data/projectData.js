@@ -28,11 +28,20 @@ export const projectData = [
   },
   {
     id: 4,
-    title: "Project 3",
+    title: "Project 4",
     description: "This is a description of Project 4.",
     img: "https://picsum.photos/200/300",
     tags: ["Python", "Pygame"],
-    link: "https://example.com/project3",
+    link: "https://example.com/project4",
     github: "https://github.com/username/project4",
+  },
+  {
+    id: 5,
+    title: "Project 5",
+    description: "This is a description of Project 5.",
+    img: "https://picsum.photos/200/300",
+    tags: ["Python", "Pygame"],
+    link: "https://example.com/project5",
+    github: "https://github.com/username/project5",
   },
 ];
