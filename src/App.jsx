@@ -9,11 +9,11 @@ const App = () => (
       <About />
       <Education />
     </section>
-    <section className="padding bg-slate-600">
-      <Skills />
-    </section>
     <section className="padding">
       <Projects />
+    </section>
+    <section className="padding bg-slate-600">
+      <Skills />
     </section>
     <section className="padding">Resume</section>
     <section className="padding">

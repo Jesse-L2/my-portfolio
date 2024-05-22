@@ -4,9 +4,9 @@ import LaunchIcon from "@mui/icons-material/Launch";
 
 const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
   return (
-    <div className="mx-auto max-w-lg text-center hover:-translate-y-2">
+    <div className="mx-auto max-w-lg text-center hover:-translate-y-1 bg-slate-800 rounded-xl">
       <a
-        className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/10"
+        className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-gray-500/10 hover:shadow-gray-500/10 hover:ring-1 focus:outline-none focus:ring"
         href={id}
       >
         <a href={id}>
@@ -18,10 +18,10 @@ const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
         </a>
         <h2 className="mt-4 text-xl font-bold text-white">{title}</h2>
         <p className="mt-1 text-sm text-gray-300">{description}</p>
-        <div className="tags mt-4 flex flex-wrap gap-1 justify-center">
+        <div className="tags mt-4 flex flex-wrap gap-1 justify-center ">
           {tags.map((tag) => (
             <span
-              className="whitespace-nowrap rounded-full bg-white hover:bg-pink-100 px-2.5 py-0.5 text-xs text-purple-700"
+              className="whitespace-nowrap rounded-full bg-white hover:bg-purple-200 px-2.5 py-0.5 text-xs text-purple-800 hover:-translate-y-0.5"
               key={tag}
             >
               {tag}
@@ -32,14 +32,14 @@ const ProjectCard = ({ id, title, description, img, tags, link, github }) => {
           <a
             href={github}
             aria-label="source code"
-            className=" mx-2 hover:bg-gray-700 hover:rounded-md transition shadow-lg "
+            className=" mx-2 hover:bg-gray-800 hover:rounded-md transition shadow-lg hover:text-green-400"
           >
             <GitHubIcon />
           </a>
           <a
             href={link}
             aria-label="live view"
-            className="mx-2 hover:bg-gray-700 transition shadow-lg"
+            className="mx-2 hover:bg-gray-800 transition shadow-lg hover:text-green-400"
           >
             <LaunchIcon />
           </a>
