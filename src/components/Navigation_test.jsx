@@ -1,11 +1,10 @@
 import { hd_Logo } from "../assets/logo";
 import { navLinks } from "../constants/navLinks";
 import { motion } from "framer-motion";
-import { useDimensions } from "./use-dimensions";
+
 import { MenuToggle } from "./MenuToggle";
 // import { MenuItem } from "./MenuItem";
-import { useRef } from "react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const menuItemVariants = {
   open: {
@@ -21,16 +20,17 @@ const menuItemVariants = {
     opacity: 0,
     transition: {
       y: { stiffness: 1000 },
+      duration: 0,
     },
   },
 };
 
 const navVariants = {
   open: {
-    transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
   },
   closed: {
-    transition: { staggerChildren: 0.15, staggerDirection: -1 },
+    transition: { staggerChildren: 0, staggerDirection: -1 },
   },
 };
 
@@ -49,6 +49,11 @@ const Navigation_test = () => {
   };
 
   window.addEventListener("resize", handleWindowResize);
+  useEffect(() => {
+    if (window.innerWidth < 1024) {
+      setIsMenuOpen(false);
+    }
+  }, []);
 
   return (
     <header>

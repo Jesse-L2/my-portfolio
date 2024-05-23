@@ -15,7 +15,7 @@ export const MenuToggle = ({ isMenuOpen, setIsMenuOpen }) => (
   <button
     data-collapse-toggle="mobile-menu"
     type="button"
-    className="inline-flex items-center p-4 rounded-lg lg:hidden  dark:text-gray-400  "
+    className="inline-flex items-center p-4 rounded-lg lg:hidden  dark:text-gray-400"
     onClick={() => setIsMenuOpen(!isMenuOpen)}
   >
     <svg width="60" height="60" viewBox="0 0 23 23">
@@ -31,7 +31,7 @@ export const MenuToggle = ({ isMenuOpen, setIsMenuOpen }) => (
           closed: { opacity: 1 },
           open: { opacity: 0 },
         }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.15 }}
       />
       <Path
         variants={{
