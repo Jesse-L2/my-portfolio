@@ -64,7 +64,7 @@ const Navigation = () => {
       >
         <a className="rounded-full min-h-[100px] min-w-[100px]" href="/">
           <img
-            className="rounded-full p-1 m-4"
+            className="rounded-full p-1 m-4 "
             src={hd_Logo}
             alt="Logo"
             width={100}
