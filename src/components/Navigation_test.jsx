@@ -1,38 +1,74 @@
 import { hd_Logo } from "../assets/logo";
 import { navLinks } from "../constants/navLinks";
-// import { motion } from "framer-motion";
-// import { useDimensions } from "./use-dimensions";
+import { motion } from "framer-motion";
+import { useDimensions } from "./use-dimensions";
 import { MenuToggle } from "./MenuToggle";
 // import { MenuItem } from "./MenuItem";
-// import { useRef } from "react";
+import { useRef } from "react";
 import { useState } from "react";
 
+const menuItemVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    y: 50,
+    height: 0,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
+
+const navVariants = {
+  open: {
+    transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.15, staggerDirection: -1 },
+  },
+};
+
 const Navigation_test = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const containerRef = useRef(null);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const handleWindowResive = () => {
+  const handleWindowResize = () => {
     // Handle situation where someone toggled nav but switched to fullscreen
     if (window.innerWidth >= 1024) {
+      setIsMenuOpen(true);
+    }
+    if (window.innerWidth < 1024) {
       setIsMenuOpen(false);
     }
   };
 
-  window.addEventListener("resize", handleWindowResive);
+  window.addEventListener("resize", handleWindowResize);
 
   return (
     <header>
-      <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
-        <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+      <motion.nav
+        className="bg-white border-gray-200 py-2.5 dark:bg-gray-900"
+        initial={true}
+        animate={isMenuOpen ? "open" : "closed"}
+        ref={containerRef}
+      >
+        <motion.div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
           <a href="#" className="flex items-center">
             <img
               className="rounded-full p-1 m-4 hover:animate-bounce"
               src={hd_Logo}
               alt="Jesse Little Logo"
-              width={120}
-              height={120}
+              width={100}
+              height={100}
             />
           </a>
-          <div className="flex items-center lg:order-2">
+          <motion.div className="flex items-center lg:order-2">
             <span className="sr-only">Open main menu</span>
 
             <MenuToggle
@@ -40,13 +76,16 @@ const Navigation_test = () => {
               isMenuOpen={isMenuOpen}
               setIsMenuOpen={setIsMenuOpen}
             />
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             className="items-center justify-between w-full lg:flex lg:w-auto lg:order-1"
             id="mobile-menu-2"
           >
-            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 ">
-              <li>
+            <motion.ul
+              className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 "
+              variants={navVariants}
+            >
+              <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
                   className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
@@ -54,21 +93,21 @@ const Navigation_test = () => {
                 >
                   Home
                 </a>
-              </li>
+              </motion.li>
               {navLinks.map((link) => (
-                <li key={link.label}>
+                <motion.li key={link.label} variants={menuItemVariants}>
                   <a
                     href="#"
                     className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}
                   </a>
-                </li>
+                </motion.li>
               ))}
-            </ul>
-          </div>
-        </div>
-      </nav>
+            </motion.ul>
+          </motion.div>
+        </motion.div>
+      </motion.nav>
     </header>
   );
 };

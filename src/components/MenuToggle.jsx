@@ -13,12 +13,12 @@ const Path = (props) => (
 
 export const MenuToggle = ({ isMenuOpen, setIsMenuOpen }) => (
   <button
-    data-collapse-toggle="mobile-menu-2"
+    data-collapse-toggle="mobile-menu"
     type="button"
-    className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    className="inline-flex items-center p-4 rounded-lg lg:hidden  dark:text-gray-400  "
     onClick={() => setIsMenuOpen(!isMenuOpen)}
   >
-    <svg width="50" height="50" viewBox="0 0 30 30">
+    <svg width="60" height="60" viewBox="0 0 23 23">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
@@ -31,7 +31,7 @@ export const MenuToggle = ({ isMenuOpen, setIsMenuOpen }) => (
           closed: { opacity: 1 },
           open: { opacity: 0 },
         }}
-        transition={{ duration: 0.1 }}
+        transition={{ duration: 0.2 }}
       />
       <Path
         variants={{
