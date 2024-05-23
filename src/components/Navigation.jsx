@@ -54,9 +54,9 @@ const Navigation = () => {
   window.addEventListener("resize", handleWindowResive);
 
   return (
-    <header className="absolute w-full padding-x py-8 z-10 bg-white ">
+    <header className="absolute w-full padding-x py-6 z-10 bg-white ">
       <motion.nav
-        className="flex max-container bg-slate-500"
+        className="flex max-container"
         style={{
           className: isMenuOpen ? "W" : "justify-between",
         }}
@@ -66,11 +66,11 @@ const Navigation = () => {
             className="rounded-full p-1 m-4 hover:animate-bounce "
             src={hd_Logo}
             alt="Logo"
-            width={100}
-            height={100}
+            width={120}
+            height={120}
           />
         </a>
-        <ul className="flex justify-center items-center gap-20 max-lg:hidden">
+        <ul className="flex justify-center items-center gap-20 max-lg:hidden bold">
           {navLinks.map((link) => (
             <li className="" key={link.label}>
               <a className="text-2xl hover:text-blue-600" href={link.href}>

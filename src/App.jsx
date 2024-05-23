@@ -1,10 +1,10 @@
 import { About, Education, Footer, Skills } from "./sections";
 import { Projects } from "./sections/Projects";
-import { Navigation } from "./components";
+import { Navigation, Navigation_test } from "./components";
 
 const App = () => (
   <main className="relative bg-slate-800 ">
-    <Navigation />
+    <Navigation_test />
     <section className="padding">
       <About />
       <Education />
