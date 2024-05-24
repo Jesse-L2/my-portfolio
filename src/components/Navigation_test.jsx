@@ -87,7 +87,7 @@ const Navigation_test = () => {
             id="mobile-menu-2"
           >
             <motion.ul
-              className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 "
+              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-xl font-bold font-montserrat "
               variants={navVariants}
             >
               <motion.li variants={menuItemVariants}>
@@ -102,7 +102,7 @@ const Navigation_test = () => {
               {navLinks.map((link) => (
                 <motion.li key={link.label} variants={menuItemVariants}>
                   <a
-                    href="#"
+                    href={link.href}
                     className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}
