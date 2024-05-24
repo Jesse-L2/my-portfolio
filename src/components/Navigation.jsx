@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import { MenuToggle } from "./MenuToggle";
 // import { MenuItem } from "./MenuItem";
+import Switch from "./Switch/Switch";
 import { useState, useEffect, useRef } from "react";
 
 const menuItemVariants = {
@@ -110,6 +111,9 @@ const Navigation = () => {
                 </motion.li>
               ))}
             </motion.ul>
+            <div className="flex items-center justify-end w-full lg:flex lg:w-auto lg:order-1 lg:relative lg:pl-40 pb-8 lg:pb-0">
+              <Switch />
+            </div>
           </motion.div>
         </motion.div>
       </motion.nav>

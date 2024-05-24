@@ -14,12 +14,12 @@ export default function Switch() {
 
   return (
     <div
-      className="switch w-40 h-[100px] bg-[rgba(255,255,255,0.4)] flex justify-start cursor-pointer p-2.5 rounded-[50px]"
+      className="switch w-12 h-6 bg-gray-900 dark:bg-white flex cursor-pointer p-1  rounded-3xl"
       data-isOn={isOn}
       onClick={toggleSwitch}
     >
       <motion.div
-        className="w-20 h-20 bg-[white] rounded-[40px]"
+        className="handle w-4 h-4 bg-white rounded-[40px] p-2"
         layout
         transition={spring}
       />
