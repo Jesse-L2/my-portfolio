@@ -57,6 +57,8 @@ const Navigation = () => {
     <header className="absolute w-full padding-x py-6 z-10 bg-white ">
       <motion.nav
         className="flex max-container"
+        initial={false}
+        animate={isMenuOpen ? "open" : "closed"}
         style={{
           className: isMenuOpen ? "W" : "justify-between",
         }}
@@ -70,7 +72,7 @@ const Navigation = () => {
             height={120}
           />
         </a>
-        <ul className="flex justify-center items-center gap-20 max-lg:hidden bold">
+        <motion.ul className="flex justify-center items-center gap-20 max-lg:hidden bold">
           {navLinks.map((link) => (
             <li className="" key={link.label}>
               <a className="text-2xl hover:text-blue-600" href={link.href}>
@@ -78,7 +80,7 @@ const Navigation = () => {
               </a>
             </li>
           ))}
-        </ul>
+        </motion.ul>
         <motion.nav
           className=""
           initial={false}

@@ -4,7 +4,7 @@ import { Navigation, Navigation_test } from "./components";
 
 const App = () => (
   <main className="relative bg-slate-800 ">
-    <Navigation_test />
+    <Navigation />
     <section className="padding">
       <About />
       <Education />
