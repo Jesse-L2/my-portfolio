@@ -1,119 +1,117 @@
 import { hd_Logo } from "../assets/logo";
 import { navLinks } from "../constants/navLinks";
 import { motion } from "framer-motion";
-import { useDimensions } from "./use-dimensions";
-import { MenuToggle } from "./MenuToggle";
-import { MenuItem } from "./MenuItem";
-import { useRef } from "react";
-import { useState } from "react";
-// import Switch from "./Switch/Switch";
 
-const variants = {
+import { MenuToggle } from "./MenuToggle";
+// import { MenuItem } from "./MenuItem";
+import { useState, useEffect, useRef } from "react";
+
+const menuItemVariants = {
   open: {
-    transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
   },
   closed: {
-    transition: { staggerChildren: 0.15, staggerDirection: -1 },
+    y: 50,
+    height: 0,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+      duration: 0,
+    },
   },
 };
 
-const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      restDelta: 2,
-    },
-  }),
+const navVariants = {
+  open: {
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+  },
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
-    transition: {
-      delay: 0.5,
-      type: "spring",
-      stiffness: 400,
-      damping: 40,
-    },
+    transition: { staggerChildren: 0, staggerDirection: -1 },
   },
 };
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
   const containerRef = useRef(null);
-  const { height } = useDimensions(containerRef);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  const handleWindowResive = () => {
+  const handleWindowResize = () => {
     // Handle situation where someone toggled nav but switched to fullscreen
     if (window.innerWidth >= 1024) {
+      setIsMenuOpen(true);
+    }
+    if (window.innerWidth < 1024) {
       setIsMenuOpen(false);
     }
   };
 
-  window.addEventListener("resize", handleWindowResive);
+  window.addEventListener("resize", handleWindowResize);
+  useEffect(() => {
+    if (window.innerWidth < 1024) {
+      setIsMenuOpen(false);
+    }
+  }, []);
 
   return (
-    <header className="absolute w-full padding-x py-6 z-10 bg-white ">
+    <header>
       <motion.nav
-        className="flex max-container"
-        initial={false}
+        className="bg-white border-gray-200 py-2.5 dark:bg-gray-900"
+        initial={true}
         animate={isMenuOpen ? "open" : "closed"}
-        style={{
-          className: isMenuOpen ? "W" : "justify-between",
-        }}
+        ref={containerRef}
       >
-        <a className="rounded-full min-h-24 min-w-24" href="/">
-          <img
-            className="rounded-full p-1 m-4 hover:animate-bounce "
-            src={hd_Logo}
-            alt="Logo"
-            width={120}
-            height={120}
-          />
-        </a>
-        <motion.ul className="flex justify-center items-center gap-20 max-lg:hidden bold">
-          {navLinks.map((link) => (
-            <li className="" key={link.label}>
-              <a className="text-2xl hover:text-blue-600" href={link.href}>
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </motion.ul>
-        <motion.nav
-          className=""
-          initial={false}
-          animate={isMenuOpen ? "open" : "closed"}
-          custom={height}
-          ref={containerRef}
-          style={{
-            className: isMenuOpen
-              ? "justify-self-center left-[50%] right-[50%]"
-              : "justify-between",
-          }}
-        >
-          <motion.div
-            className="background absolute w-[300px]  bg-slate-100 bg-transparent "
-            variants={sidebar}
-          />
+        <motion.div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+          <a href="#" className="flex items-center">
+            <img
+              className="rounded-full p-1 m-4 hover:animate-bounce"
+              src={hd_Logo}
+              alt="Jesse Little Logo"
+              width={100}
+              height={100}
+            />
+          </a>
+          <motion.div className="flex items-center lg:order-2">
+            <span className="sr-only">Open main menu</span>
 
-          <MenuToggle
-            toggle={toggleMenu}
-            isMenuOpen={isMenuOpen}
-            setIsMenuOpen={setIsMenuOpen}
-          />
-        </motion.nav>
-        {isMenuOpen && (
-          <motion.ul
-            className="m-4 p-4 bg-slate-100 flex-column left-[50%] right-[50%] justify-center top-20 "
-            variants={variants}
+            <MenuToggle
+              toggle={toggleMenu}
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+            />
+          </motion.div>
+          <motion.div
+            className="items-center justify-between w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
           >
-            {navLinks.map((navLink) => (
-              <MenuItem i={navLink.id} key={navLink.id} />
-            ))}
-          </motion.ul>
-        )}
+            <motion.ul
+              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-xl font-bold font-montserrat "
+              variants={navVariants}
+            >
+              <motion.li variants={menuItemVariants}>
+                <a
+                  href="#"
+                  className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+              </motion.li>
+              {navLinks.map((link) => (
+                <motion.li key={link.label} variants={menuItemVariants}>
+                  <a
+                    href={link.href}
+                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    {link.label}
+                  </a>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
+        </motion.div>
       </motion.nav>
     </header>
   );
