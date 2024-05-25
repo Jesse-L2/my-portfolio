@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 import { MenuToggle } from "./MenuToggle";
 // import { MenuItem } from "./MenuItem";
-import Switch from "./Switch/Switch";
+// import Switch from "./Switch/Switch";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useState, useEffect, useRef } from "react";
 
 const menuItemVariants = {
@@ -56,8 +57,20 @@ const Navigation = () => {
     }
   }, []);
 
+  const [isDarkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+  };
+
   return (
     <header>
+      <DarkModeSwitch
+        className="absolute m-2 top-0 right-10"
+        checked={isDarkMode}
+        onChange={toggleDarkMode}
+        size={32}
+      />
       <motion.nav
         className="bg-white border-gray-200 py-2.5 dark:bg-gray-900"
         initial={true}
@@ -111,9 +124,9 @@ const Navigation = () => {
                 </motion.li>
               ))}
             </motion.ul>
-            <div className="flex items-center justify-end w-full lg:flex lg:w-auto lg:order-1 lg:relative lg:pl-40 pb-8 lg:pb-0">
+            {/* <div className="flex items-center justify-end w-full lg:flex lg:w-auto lg:order-1 lg:relative lg:pl-40 pb-8 lg:pb-0">
               <Switch />
-            </div>
+            </div>   */}
           </motion.div>
         </motion.div>
       </motion.nav>
