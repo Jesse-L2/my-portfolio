@@ -36,6 +36,16 @@ const navVariants = {
   },
 };
 
+if (
+  localStorage.getItem("color-theme") === "dark" ||
+  (!("color-theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
   const containerRef = useRef(null);
@@ -57,22 +67,23 @@ const Navigation = () => {
     }
   }, []);
 
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [dark, setDarkMode] = useState(false);
 
-  const toggleDarkMode = (checked) => {
-    setDarkMode(checked);
+  const darkModeHandler = () => {
+    setDarkMode(!dark);
+    document.body.classList.toggle("dark");
   };
 
   return (
-    <header>
+    <header className="bg-white dark:bg-black">
       <DarkModeSwitch
         className="absolute m-2 top-0 right-10"
-        checked={isDarkMode}
-        onChange={toggleDarkMode}
+        checked={dark}
+        onChange={() => darkModeHandler()}
         size={32}
       />
       <motion.nav
-        className="bg-white border-gray-200 py-2.5 dark:bg-gray-900"
+        className="bg-white border-gray-200 py-2.5 dark:bg-black"
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
         ref={containerRef}
@@ -124,9 +135,6 @@ const Navigation = () => {
                 </motion.li>
               ))}
             </motion.ul>
-            {/* <div className="flex items-center justify-end w-full lg:flex lg:w-auto lg:order-1 lg:relative lg:pl-40 pb-8 lg:pb-0">
-              <Switch />
-            </div>   */}
           </motion.div>
         </motion.div>
       </motion.nav>

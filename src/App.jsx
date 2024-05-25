@@ -3,7 +3,7 @@ import { Projects } from "./sections/Projects";
 import { Navigation } from "./components";
 
 const App = () => (
-  <main className="relative bg-slate-800 ">
+  <main className="relative">
     <Navigation />
     <section className="padding">
       <About />
@@ -12,7 +12,7 @@ const App = () => (
     <section className="padding">
       <Projects />
     </section>
-    <section className="padding bg-slate-600">
+    <section className="padding dark:bg-slate-600">
       <Skills />
     </section>
     <section className="padding">Resume</section>
