@@ -5,10 +5,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "main-bg": "#003C43",
-        "secondary-bg": "#135D66",
-        "tertiary-bg": "#77B0AA",
-        "light-bg": "#E3FEF7",
+        "main-bg": "",
+        "secondary-bg": "",
+        "tertiary-bg": "",
+        "light-bg": "",
         theme1: {
           1: "#0d1b2a",
           2: "#1b263b",

@@ -3,13 +3,13 @@ import { Projects } from "./sections/Projects";
 import { Navigation } from "./components";
 
 const App = () => (
-  <main className="relative bg-white dark:bg-gray-800">
+  <main className="relative bg-white dark:bg-stone-950">
     <Navigation />
-    <section className="padding ">
+    <section className="padding">
       <About className="" />
       <Education />
     </section>
-    <section className="padding ">
+    <section className="padding dark:bg-stone-800">
       <Projects />
     </section>
     <section className="padding">
