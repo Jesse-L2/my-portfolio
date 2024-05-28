@@ -18,7 +18,7 @@ export const MenuToggle = ({ isMenuOpen, setIsMenuOpen }) => (
     className="inline-flex items-center p-4 rounded-lg lg:hidden  dark:text-gray-400"
     onClick={() => setIsMenuOpen(!isMenuOpen)}
   >
-    <svg width="60" height="60" viewBox="0 0 23 23">
+    <svg width="36" height="36" viewBox="0 0 24 24">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
