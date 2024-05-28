@@ -5,7 +5,12 @@ const Path = (props) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
+    stroke={
+      document.body.classList.contains("dark")
+        ? "hsl(0, 0%, 100%)"
+        : "hsl(0, 0%, 18%)"
+    }
+    // stroke="hsl(0, 0%, 18%)"
     strokeLinecap="round"
     {...props}
   />
@@ -15,7 +20,7 @@ export const MenuToggle = ({ isMenuOpen, setIsMenuOpen }) => (
   <button
     data-collapse-toggle="mobile-menu"
     type="button"
-    className="inline-flex items-center p-4 rounded-lg lg:hidden  dark:text-gray-400"
+    className="inline-flex items-center p-4 rounded-lg lg:hidden mt-12 "
     onClick={() => setIsMenuOpen(!isMenuOpen)}
   >
     <svg width="36" height="36" viewBox="0 0 24 24">

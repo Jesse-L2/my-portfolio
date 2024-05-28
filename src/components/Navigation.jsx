@@ -77,7 +77,7 @@ const Navigation = () => {
   return (
     <header className="bg-white dark:bg-black">
       <DarkModeSwitch
-        className="absolute m-2 top-0 right-7"
+        className="absolute m-2 top-4 right-7"
         checked={dark}
         onChange={() => darkModeHandler()}
         size={32}
