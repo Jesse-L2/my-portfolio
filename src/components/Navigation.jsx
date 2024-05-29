@@ -1,6 +1,8 @@
 import { hd_Logo } from "../assets/logo";
 import { navLinks } from "../constants/navLinks";
 import { motion } from "framer-motion";
+import { menuItemVariants } from "../constants/framerVariants";
+import { navVariants } from "../constants/framerVariants";
 
 import { MenuToggle } from "./MenuToggle";
 // import { MenuItem } from "./MenuItem";
@@ -8,34 +10,6 @@ import { MenuToggle } from "./MenuToggle";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useState, useEffect, useRef } from "react";
 import "matchmedia-polyfill";
-
-const menuItemVariants = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 },
-    },
-  },
-  closed: {
-    y: 50,
-    height: 0,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-      duration: 0,
-    },
-  },
-};
-
-const navVariants = {
-  open: {
-    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0, staggerDirection: -1 },
-  },
-};
 
 // if (
 //   localStorage.getItem("color-theme") === "dark" ||
@@ -139,7 +113,7 @@ const Navigation = () => {
                 <motion.li key={link.label} variants={menuItemVariants}>
                   <a
                     href={link.href}
-                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-300 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}
                   </a>
