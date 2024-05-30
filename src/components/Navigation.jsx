@@ -66,6 +66,7 @@ const Navigation = () => {
         size={32}
       />
       <motion.nav
+        // Navbar background color
         className="bg-white border-gray-600 py-2.5 dark:bg-black"
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
