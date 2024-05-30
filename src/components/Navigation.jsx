@@ -67,7 +67,7 @@ const Navigation = () => {
       />
       <motion.nav
         // Navbar background color
-        className=" border-gray-600 py-2.5 "
+        className=" py-2.5 bg-white dark:bg-slate-800"
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
         ref={containerRef}
@@ -92,17 +92,17 @@ const Navigation = () => {
             />
           </motion.div>
           <motion.div
-            className="items-center justify-between w-full lg:flex lg:w-auto lg:order-1"
+            className="items-center justify-between w-full lg:flex lg:w-auto lg:order-1 mr-16"
             id="mobile-menu-2"
           >
             <motion.ul
-              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-xl font-bold font-montserrat "
+              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-2xl font-bold font-montserrat pr-4 gap-y-1 gap-x-1"
               variants={navVariants}
             >
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                  className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-teal-200"
                   aria-current="page"
                 >
                   Home
@@ -112,7 +112,7 @@ const Navigation = () => {
                 <motion.li key={link.label} variants={menuItemVariants}>
                   <a
                     href={link.href}
-                    className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-300 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 pl-3 pr-4 text-black border-b border-gray-700 hover:bg-gray-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-300 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}
                   </a>
