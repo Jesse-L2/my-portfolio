@@ -4,6 +4,9 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-grandient(var(--tw-gradient-stops))",
+      },
       colors: {
         "main-bg": "",
         "secondary-bg": "",

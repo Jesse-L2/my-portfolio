@@ -5,8 +5,6 @@ import { menuItemVariants } from "../constants/framerVariants";
 import { navVariants } from "../constants/framerVariants";
 
 import { MenuToggle } from "./MenuToggle";
-// import { MenuItem } from "./MenuItem";
-// import Switch from "./Switch/Switch";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useState, useEffect, useRef } from "react";
 import "matchmedia-polyfill";
@@ -60,7 +58,7 @@ const Navigation = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-black">
+    <header className="">
       <DarkModeSwitch
         className="absolute m-2 top-4 right-7"
         checked={dark}
@@ -68,7 +66,7 @@ const Navigation = () => {
         size={32}
       />
       <motion.nav
-        className="bg-white border-gray-200 py-2.5 dark:bg-black"
+        className="bg-white border-gray-600 py-2.5 dark:bg-black"
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
         ref={containerRef}
