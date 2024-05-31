@@ -27,6 +27,12 @@ const mySkills = [
   "pycharm",
   "webstorm",
   "jupyternotebook",
+  "docker",
+  "react",
+  "office",
+  "lightroom",
+  "numpy",
+  "pandas",
 ];
 
 export { mySkills };
