@@ -42,7 +42,7 @@ const Skills = () => {
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-6 sm:h-12">
                     <img
-                      src={`src/assets/icons/${skill}.png`}
+                      src={`src/assets/icons/${skill}.svg`}
                       alt={skill}
                       width={54}
                       height={54}
