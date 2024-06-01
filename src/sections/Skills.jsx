@@ -1,5 +1,4 @@
 import { mySkills } from "../constants/mySkills";
-import { javascript, python, typescript } from "../assets/icons";
 import Marquee from "react-fast-marquee";
 
 const Skills = () => {
@@ -38,12 +37,8 @@ const Skills = () => {
               className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
               key={skill}
             >
-              <div className="h-full w-full rounded-lg border-2 bg-slate-800  hover:border-violet-700  transition-all duration-500 dark:bg-teal-300 dark:border-black">
-                <div className="flex -translate-y-[1px] justify-center">
-                  <div className="w-3/4">
-                    <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
-                  </div>
-                </div>
+              <div className="h-full w-full rounded-xl border-2 bg-emerald-700  hover:border-violet-700  transition-all duration-500 dark:bg-emerald-500 dark:border-black">
+                <div className="flex -translate-y-[1px] justify-center"></div>
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-6 sm:h-12">
                     <img
@@ -51,10 +46,10 @@ const Skills = () => {
                       alt={skill}
                       width={54}
                       height={54}
-                      className="h-full w-auto rounded-lg"
+                      className="h-full w-auto"
                     />
                   </div>
-                  <p className="text-white text-sm sm:text-lg">{skill}</p>
+                  <p className="text-white text-md sm:text-lg">{skill}</p>
                 </div>
               </div>
             </div>
