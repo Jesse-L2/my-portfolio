@@ -23,7 +23,6 @@ const mySkills = [
   "json",
   "jupyter",
   "kubernetes",
-  "linkedin",
   "lodash",
   "materialui",
   "matplotlib",
@@ -60,13 +59,6 @@ const mySkills = [
   "webstorm",
   "yaml",
   "yarn",
-  "arrow_right",
-  "chevron_left",
-  "chevron_right",
-  "facebook",
-  "hamburgerIcon",
-  "instagram",
-  "twitter",
 ];
 
 export { mySkills };
