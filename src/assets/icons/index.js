@@ -6,4 +6,4 @@ import chevron_left from "./chevron-left.svg";
 import chevron_right from "./chevron-right.svg";
 import facebook from "./facebook.svg";
 
-export { *}
+export { * };

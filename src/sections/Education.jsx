@@ -4,7 +4,7 @@ const Education = () => {
   return (
     <section className="mt-4">
       <div>
-        <h1>Education</h1>
+        <h1 className="text-3xl font-semibold text-white">Education</h1>
         <img
           className=""
           src={UT_Logo}
