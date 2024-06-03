@@ -3,19 +3,19 @@ import { Projects } from "./sections/Projects";
 import { Navigation } from "./components";
 
 const App = () => (
-  <main className="relative dark:bg-slate-900 bg-gradient-to-t from-white-200 via-slate-900 to-white ">
+  <main className="relative dark:bg-dark bg-gradient-to-t from-white-200 via-slate-400 to-white ">
     <Navigation className="" />
-    <section className="padding dark:bg-gray-900 ">
+    <section className="padding dark:bg-dark ">
       <About className="" />
       <Education />
     </section>
-    <section className="padding dark:bg-gray-900 ">
+    <section className="padding">
       <Projects />
     </section>
-    <section className="padding dark:bg-gray-900">
+    <section className="padding dark:bg-lightMist-900">
       <Skills />
     </section>
-    <section className="padding dark:bg-gray-900 ">
+    <section className="padding ">
       <Footer />
     </section>
   </main>

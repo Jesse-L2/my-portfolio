@@ -67,7 +67,7 @@ const Navigation = () => {
       />
       <motion.nav
         // Navbar background color
-        className=" py-2.5 bg-sky-100 dark:bg-slate-800"
+        className=" py-2.5 bg-main-bg dark:bg-dark-bg"
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
         ref={containerRef}
@@ -102,7 +102,7 @@ const Navigation = () => {
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-sky-500"
+                  className="block py-2 pl-3 pr-4 text-purple-700 bg-lightMist-900 rounded lg:bg-transparent lg:dark:text-light-text lg:p-0 "
                   aria-current="page"
                 >
                   Home
@@ -112,7 +112,7 @@ const Navigation = () => {
                 <motion.li key={link.label} variants={menuItemVariants}>
                   <a
                     href={link.href}
-                    className="block py-2 pl-3 pr-4 text-black border-b border-gray-700 hover:bg-gray-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-300 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 pl-3 pr-4 text-black border-b border-gray-700 hover:bg-gray-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-200 lg:dark:hover:text-white dark:hover:bg-lightMist-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}
                   </a>
