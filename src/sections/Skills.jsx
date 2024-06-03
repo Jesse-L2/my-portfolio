@@ -15,7 +15,7 @@ const Skills = () => {
         <div className="h-[1px] bg-gradient-to-r from-teal-500 via-violet-500 to-teal-500  w-full" />
       </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
+      <div className="flex justify-center my-5 lg:py-4">
         <div className="flex items-center">
           <span className=" text-black dark:text-white p-2 px-4 text-3xl sm:text-4xl rounded-md font-bold">
             My Tools and Skills
@@ -23,7 +23,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="w-full my-8">
+      <div className="w-full my-0">
         {chunks.map((chunk, index) => (
           <div key={index} className="w-full">
             <Marquee
@@ -32,11 +32,11 @@ const Skills = () => {
               pauseOnHover={true}
               delay={0}
               play={true}
-              direction={index === 1 ? "right" : "left"} // Set direction to "right" for the middle Marquee
+              direction={index === 1 ? "right" : "left"} // Set direction to "right" for the middle Marquee (or every 2nd if more chunks)
             >
               {chunk.map((skill) => (
                 <div
-                  className="w-24 h-24 min-w-fit flex flex-col items-center justify-center transition-all duration-200 m-0 rounded-full group p-0 relative  cursor-pointer   bg-emerald-500 mb-6 mx-6 mt-6 active:bg-emerald-600 active:scale-110 border-black border-2 "
+                  className="w-24 h-24 min-w-fit flex flex-col items-center justify-center transition-all duration-200 m-0 rounded-full group p-0 relative  cursor-pointer   bg-sky-300 mb-2 mx-2 mt-2 md:mb-4 md:mx-4 md:mt-4 active:bg-sky-400 active:scale-110 border-black border-2 "
                   key={skill}
                 >
                   <div className="flex -translate-y-[1px] justify-center"></div>

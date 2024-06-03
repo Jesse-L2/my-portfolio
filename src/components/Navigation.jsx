@@ -67,7 +67,7 @@ const Navigation = () => {
       />
       <motion.nav
         // Navbar background color
-        className=" py-2.5 bg-white dark:bg-slate-800"
+        className=" py-2.5 bg-sky-100 dark:bg-slate-800"
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
         ref={containerRef}
@@ -102,7 +102,7 @@ const Navigation = () => {
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-teal-200"
+                  className="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-sky-500"
                   aria-current="page"
                 >
                   Home

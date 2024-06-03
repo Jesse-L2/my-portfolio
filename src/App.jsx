@@ -3,7 +3,7 @@ import { Projects } from "./sections/Projects";
 import { Navigation } from "./components";
 
 const App = () => (
-  <main className="relative dark:bg-slate-900 bg-gradient-to-t from-indigo-200 via-violet-200 to-white ">
+  <main className="relative dark:bg-slate-900 bg-gradient-to-t from-white-200 via-slate-900 to-white ">
     <Navigation className="" />
     <section className="padding dark:bg-gray-900 ">
       <About className="" />
