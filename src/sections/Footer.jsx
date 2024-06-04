@@ -1,7 +1,10 @@
 import { facebook, instagram, linkedIn } from "../assets/icons";
 const Footer = () => {
   return (
-    <footer className=" text-black dark:text-white px-16 py-8   dark:bg-indigoIron-600">
+    <footer
+      id="contact"
+      className=" text-black dark:text-white px-16 py-8   dark:bg-indigoIron-600"
+    >
       <div className="flex flex-col-reverse md:flex-row md:justify-between md:max-w-3xl w-full mx-auto">
         <h2 className="text-center md:text-left">© 2024 Jesse Little</h2>
         <ul className="flex flex-wrap gap-8 icons justify-center md:justify-end ">

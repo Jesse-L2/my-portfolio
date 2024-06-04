@@ -5,7 +5,10 @@ import { projectData } from "../../data/projectData";
 
 const Projects = () => {
   return (
-    <section className="padding text-black  dark:text-white dark:bg-indigoIron-700">
+    <section
+      id="projects"
+      className="padding text-black  dark:text-white dark:bg-indigoIron-700"
+    >
       <div className="mx-auto max-w-screen-xl ">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">My Projects</h2>
