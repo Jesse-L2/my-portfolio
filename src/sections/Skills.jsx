@@ -11,7 +11,7 @@ const Skills = () => {
 
   return (
     <section
-      className="section skills z-12 my-0 lg:my-2 padding dark:bg-indigoIron-900"
+      className="section skills z-12 padding dark:bg-indigoIron-700"
       id="skills"
     >
       <div className="flex justify-center -translate-y-[1px]">
