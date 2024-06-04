@@ -10,7 +10,10 @@ const Skills = () => {
   );
 
   return (
-    <section className="section skills z-12 my-0 lg:my-2 " id="skills">
+    <section
+      className="section skills z-12 my-0 lg:my-2 padding dark:bg-lightMist-900"
+      id="skills"
+    >
       <div className="flex justify-center -translate-y-[1px]">
         <div className="h-[1px] bg-gradient-to-r from-teal-500 via-violet-500 to-teal-500  w-full" />
       </div>
@@ -36,7 +39,7 @@ const Skills = () => {
             >
               {chunk.map((skill) => (
                 <div
-                  className="w-24 h-24 min-w-fit flex flex-col items-center justify-center transition-all duration-200 m-0 rounded-full group p-0 relative  cursor-pointer   bg-blueButterfly-300 mb-2 mx-2 mt-2 md:mb-4 md:mx-4 md:mt-4 active:bg-sky-400 active:scale-110 border-black border-2 "
+                  className="w-24 h-24 min-w-fit flex flex-col items-center justify-center transition-all duration-200 m-0 rounded-full group p-0 relative  cursor-pointer   bg-blueButterfly-300 mb-2 mx-2 mt-2 md:mb-4 md:mx-4 md:mt-4 active:bg-blueButterfly-400 active:scale-110 border-black border-2 dark:border-blueButterfly-200"
                   key={skill}
                 >
                   <div className="flex -translate-y-[1px] justify-center"></div>

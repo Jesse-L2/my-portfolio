@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <section>
+    <section className="padding">
       <div>
         <h2>Footer</h2>
       </div>
