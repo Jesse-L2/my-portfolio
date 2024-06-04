@@ -11,7 +11,7 @@ const Skills = () => {
 
   return (
     <section
-      className="section skills z-12 my-0 lg:my-2 padding dark:bg-lightMist-900"
+      className="section skills z-12 my-0 lg:my-2 padding dark:bg-indigoIron-900"
       id="skills"
     >
       <div className="flex justify-center -translate-y-[1px]">
@@ -20,13 +20,13 @@ const Skills = () => {
 
       <div className="flex justify-center my-5 lg:py-4">
         <div className="flex items-center">
-          <span className=" text-black dark:text-white p-2 px-4 text-3xl sm:text-4xl rounded-md font-bold">
+          <span className=" text-black dark:text-white px-4 text-3xl sm:text-4xl font-bold">
             My Tools and Skills
           </span>
         </div>
       </div>
 
-      <div className="w-full my-0">
+      <div className="w-full">
         {chunks.map((chunk, index) => (
           <div key={index} className="w-full">
             <Marquee
@@ -39,17 +39,17 @@ const Skills = () => {
             >
               {chunk.map((skill) => (
                 <div
-                  className="w-24 h-24 min-w-fit flex flex-col items-center justify-center transition-all duration-200 m-0 rounded-full group p-0 relative  cursor-pointer   bg-blueButterfly-300 mb-2 mx-2 mt-2 md:mb-4 md:mx-4 md:mt-4 active:bg-blueButterfly-400 active:scale-110 border-black border-2 dark:border-blueButterfly-200"
+                  className="w-20 h-20 min-w-fit flex flex-col items-center justify-center transition-all duration-200 m-0 rounded-3xl group p-0 relative  cursor-pointer  bg-lightWater-600  mb-2 mx-2 mt-2  active:bg-lightWater-500 active:scale-110 border-black border-2 dark:border-blueButterfly-300"
                   key={skill}
                 >
                   <div className="flex -translate-y-[1px] justify-center"></div>
                   <div className="flex flex-col items-center justify-center ">
-                    <div className="h-14 w-14">
+                    <div className="h-12 w-12 ">
                       <img
                         src={`src/assets/icons/devIcons/${skill}.svg`}
                         alt={skill}
-                        width={96}
-                        height={96}
+                        width={80}
+                        height={80}
                         className="h-full w-full"
                       />
                     </div>
@@ -60,7 +60,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-      <div className="h-[1px] bg-gradient-to-r from-teal-500 via-violet-500 to-teal-500  w-full" />
+      <div className="h-[1px] bg-gradient-to-r from-teal-500 via-violet-500 to-teal-500  w-full mt-8" />
     </section>
   );
 };
