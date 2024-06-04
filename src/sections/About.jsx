@@ -4,12 +4,16 @@ const About = () => {
       <div className="flex sm:gap-10 gap-4 flex-col sm:flex-row items-center sm:justify-evenly">
         <div className="mb-6 sm:mb-0 w-full sm:w-1/3 text-center">
           <h1 className="text-6xl font-bold font-montserrat ">
-            <span className="text-blueButterfly-500 ">Jesse</span>
+            <span className="dark:text-blueButterfly-500 text-gray-800">
+              Jesse
+            </span>
             <br></br>
-            <span className="text-blueButterfly-500">Little</span>
+            <span className="dark:text-blueButterfly-500 text-gray-800 mt-2">
+              Little
+            </span>
             <br></br>
           </h1>
-          <h3 className="text-large font-semibold dark:text-light-text">
+          <h3 className="text-large font-semibold dark:text-light-text text-lightWater-600 mt-2">
             Fullstack Developer and Software Engineer
           </h3>
         </div>

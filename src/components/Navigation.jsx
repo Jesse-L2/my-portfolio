@@ -9,15 +9,6 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useState, useEffect, useRef } from "react";
 import "matchmedia-polyfill";
 
-// if (
-//   localStorage.getItem("color-theme") === "dark" ||
-//   (!("color-theme" in localStorage) &&
-//     window.matchMedia("(prefers-color-scheme: dark)").matches)
-// ) {
-//   document.documentElement.classList.add("dark");
-// } else {
-//   document.documentElement.classList.remove("dark");
-// }
 if (
   (window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches) ||
@@ -64,6 +55,7 @@ const Navigation = () => {
         checked={dark}
         onChange={() => darkModeHandler()}
         size={32}
+        moonColor="#feda6a"
       />
       <motion.nav
         // Navbar background color
@@ -102,7 +94,7 @@ const Navigation = () => {
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-purple-700 bg-lightMist-900 rounded lg:bg-transparent lg:dark:text-light-text lg:p-0 "
+                  className="block py-2 pl-3 pr-4 text-blueButterfly-500 rounded bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700 dark:hover:bg-lightMist-800"
                   aria-current="page"
                 >
                   Home
@@ -112,7 +104,7 @@ const Navigation = () => {
                 <motion.li key={link.label} variants={menuItemVariants}>
                   <a
                     href={link.href}
-                    className="block py-2 pl-3 pr-4 text-black border-b border-gray-700 hover:bg-gray-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-200 lg:dark:hover:text-white dark:hover:bg-lightMist-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 pl-3 pr-4 text-black border-b border-gray-700 hover:bg-gray-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-blueButterfly-500 lg:p-0 dark:text-gray-100 lg:dark:hover:text-white dark:hover:bg-lightMist-800 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}
                   </a>
