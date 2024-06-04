@@ -94,7 +94,7 @@ const Navigation = () => {
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-blueButterfly-500 rounded bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700 dark:hover:bg-lightMist-800"
+                  className="block py-2 pl-3 pr-4 text-blueButterfly-500 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700 dark:hover:bg-lightMist-800 hover:bg-gray-200 lg:hover:bg-transparent lg:dark:hover:bg-transparent"
                   aria-current="page"
                 >
                   Home
