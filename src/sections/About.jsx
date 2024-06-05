@@ -2,19 +2,19 @@ import { UT_Logo } from "../assets/logo";
 const About = () => {
   return (
     <section id="about" className="padding dark:bg-dark">
-      <div className="flex sm:gap-10 gap-4 flex-col sm:flex-row items-center sm:justify-evenly">
-        <div className="mb-6 sm:mb-0 w-full sm:w-1/3 text-center">
-          <h1 className="text-6xl font-bold font-montserrat ">
+      <div className="flex sm:gap-10 gap-4 flex-col sm:flex-row items-center sm:justify-evenly  sm:max-w-[75%] mx-auto">
+        <div className="mb-6 sm:mb-0 text-center  sm:w-2/5 w-4/5 ">
+          <h1 className="text-5xl sm:text-6xl font-bold font-montserrat ">
             <span className="dark:text-white text-gray-800">Jesse</span>
             <br></br>
             <span className="dark:text-white text-gray-800 mt-2">Little</span>
             <br></br>
           </h1>
-          <h3 className="text-large font-semibold dark:text-light-text text-lightWater-650 mt-2">
+          <h3 className="text-large  font-semibold dark:text-light-text text-lightWater-650 mt-2">
             Fullstack Developer and Software Engineer
           </h3>
         </div>
-        <div className="sm:w-3/5 w-4/5 max-w-96">
+        <div className="sm:w-2/5 w-4/5 max-w-96 min-w-72">
           <img
             src=".\src\assets\images\profile_s.jpg"
             alt="My Profile Picture"
@@ -22,16 +22,23 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="mx-auto max-w-screen-xl text-center justify-center items-center">
-        <h1 className="sm:text-4xl text-3xl font-bold dark:text-white  mb-4 font-palanquin">
-          Education
-        </h1>
-        <img
-          className="items-center justify-center mx-auto"
-          src={UT_Logo}
-          alt="The University of Texas at Austin"
-        />
-      </div>
+      {/* <div className="mt-8 flex flex-col mx-auto max-w-screen-xl">
+        <div>
+          <h1 className="sm:text-4xl text-3xl font-bold dark:text-white  mb-4 font-palanquin mx-auto text-center ">
+            Education
+          </h1>
+          <div className="flex flex-row justify-evenly max-w-[40%] mx-auto">
+            <img
+              className="w-60 h-30 mx-auto"
+              src={UT_Logo}
+              alt="The University of Texas at Austin"
+            />
+            <h3 className="text-large   font-semibold dark:text-white text-black mt-2 content-center ">
+              B.S. in Biochemistry
+            </h3>
+          </div>
+        </div> */}
+      {/* </div> */}
     </section>
   );
 };
