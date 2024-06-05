@@ -1,3 +1,4 @@
+import { UT_Logo } from "../assets/logo";
 const About = () => {
   return (
     <section id="about" className="padding dark:bg-dark">
@@ -20,6 +21,16 @@ const About = () => {
             className="rounded-full "
           />
         </div>
+      </div>
+      <div className="mx-auto max-w-screen-xl text-center justify-center items-center">
+        <h1 className="sm:text-4xl text-3xl font-bold dark:text-white  mb-4 font-palanquin">
+          Education
+        </h1>
+        <img
+          className="items-center justify-center mx-auto"
+          src={UT_Logo}
+          alt="The University of Texas at Austin"
+        />
       </div>
     </section>
   );
