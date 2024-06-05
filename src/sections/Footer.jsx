@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-indigoIron-600 py-6">
+    <footer className="bg-white dark:bg-indigoIron-600 py-6 ">
       <div className="max-w-6xl mx-auto font-[sans-serif] text-black dark:text-white ">
         <div className="text-center px-6">
           <h2 className="text-3xl font-extrabold">Contact Me</h2>
@@ -8,7 +8,7 @@ const Footer = () => {
             Have a great idea to develop and want to make it reality?
           </p>
         </div>
-        <div className="grid lg:grid-cols-3 items-center gap-4 p-2 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] dark:shadow-lightWater-650 rounded-lg mt-8">
+        <div className="grid lg:grid-cols-3 items-center gap-4 pr-2 pt-2 pb-2 pl-7 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] dark:shadow-lightWater-650 rounded-lg mt-8 ">
           <div className="bg-indigoIron-700 rounded-lg p-6 max-lg:text-center">
             <h2 className="text-xl font-bold text-white dark:text-white">
               My Information
@@ -123,6 +123,25 @@ const Footer = () => {
                   </svg>
                 </a>
               </li>
+              <li>
+                <button className="flex items-center justify-center text-sm  max-lg:w-full rounded px-4 py-3 font-semibold bg-gray-800 text-white hover:bg-gray-900  h-12 w-36 shrink-0">
+                  My Resume
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="h-6 w-6 ml-2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    ></path>
+                  </svg>
+                </button>
+              </li>
             </ul>
           </div>
           <div className="p-6 rounded-xl lg:col-span-2">
@@ -162,27 +181,29 @@ const Footer = () => {
                   ></textarea>
                 </div>
               </div>
-              <button
-                type="button"
-                className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded px-4 py-2.5 font-semibold bg-[#011c2b] text-white hover:bg-[#011c2bf3]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16px"
-                  height="16px"
-                  fill="#fff"
-                  className="mr-2"
-                  viewBox="0 0 548.244 548.244"
+              <div className="flex">
+                <button
+                  type="button"
+                  className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded px-4 py-2.5 font-semibold bg-[#011c2b] text-white hover:bg-orange-700"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                    clip-rule="evenodd"
-                    data-original="#000000"
-                  />
-                </svg>
-                Send Message
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16px"
+                    height="16px"
+                    fill="#fff"
+                    className="mr-2"
+                    viewBox="0 0 548.244 548.244"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
+                      clip-rule="evenodd"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Send Message
+                </button>
+              </div>
             </form>
           </div>
         </div>
