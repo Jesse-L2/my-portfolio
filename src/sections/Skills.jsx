@@ -39,7 +39,7 @@ const Skills = () => {
             >
               {chunk.map((skill) => (
                 <div
-                  className="w-20 h-20 min-w-fit flex flex-col items-center justify-center transition-all duration-200 m-0 rounded-3xl group p-0 relative  cursor-pointer  bg-lightWater-50  mb-2 mx-2 mt-2  active:bg-lightWater-500 active:scale-110 border-black border-2 dark:border-blueButterfly-300"
+                  className="w-20 h-20 min-w-fit flex flex-col items-center justify-center transition-all duration-200 m-0 rounded-3xl group p-0 relative  cursor-pointer  bg-lightWater-50  mb-2 mx-2 mt-2  active:bg-lightWater-200 active:scale-110 border-black border-2 dark:border-4 dark:border-blueButterfly-300"
                   key={skill}
                 >
                   <div className="flex -translate-y-[1px] justify-center"></div>

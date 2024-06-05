@@ -78,7 +78,7 @@ const Footer = () => {
               </li>
             </ul>
             <ul className="flex max-lg:justify-center mt-16 space-x-4">
-              <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-gray-800 hover:bg-gray-700 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                 <a href="javascript:void(0)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const Footer = () => {
                   </svg>
                 </a>
               </li>
-              <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-gray-800 hover:bg-gray-700 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                 <a href="javascript:void(0)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ const Footer = () => {
                   </svg>
                 </a>
               </li>
-              <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-gray-800 hover:bg-gray-700 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                 <a href="javascript:void(0)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <button className="flex items-center justify-center text-sm  max-lg:w-full rounded px-4 py-3 font-semibold bg-gray-800 text-white hover:bg-gray-900  h-12 w-36 shrink-0">
+                <button className="flex items-center justify-center text-sm  max-lg:w-full rounded px-4 py-3 font-semibold  text-white   h-12 w-36 shrink-0 hover:bg-lightWater-600 bg-lightWater-650 hover:text-light-text">
                   My Resume
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ const Footer = () => {
               <div className="flex">
                 <button
                   type="button"
-                  className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded px-4 py-2.5 font-semibold bg-[#011c2b] text-white hover:bg-orange-700"
+                  className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded px-4 py-2.5 font-semibold bg-gray-800 text-white hover:dark:bg-lightWater-600 dark:bg-lightWater-650 hover:text-light-text"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -195,9 +195,9 @@ const Footer = () => {
                     viewBox="0 0 548.244 548.244"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                       data-original="#000000"
                     />
                   </svg>
