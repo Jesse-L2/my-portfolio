@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-indigoIron-600 py-6 ">
+    <footer className="bg-slate-600 dark:bg-indigoIron-600 py-6">
       <div className="max-w-6xl mx-auto font-[sans-serif] text-black dark:text-white ">
         <div className="text-center px-6">
           <h2 className="text-3xl font-extrabold">Contact Me</h2>
-          <p className="text-sm text-gray-400 mt-3">
+          <p className="text-sm text-white mt-3">
             Have a great idea and want to make it reality?
           </p>
         </div>
