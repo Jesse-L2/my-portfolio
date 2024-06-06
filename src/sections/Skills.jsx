@@ -10,10 +10,7 @@ const Skills = () => {
   );
 
   return (
-    <section
-      className="section skills z-12 padding dark:bg-indigoIron-700"
-      id="skills"
-    >
+    <section className="section skills z-12 padding dark:bg-dark" id="skills">
       <div className="flex justify-center -translate-y-[1px]">
         <div className="h-[1px] bg-gradient-to-r from-teal-500 via-violet-500 to-teal-500  w-full" />
       </div>

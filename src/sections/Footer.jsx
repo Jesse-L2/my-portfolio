@@ -1,14 +1,14 @@
 const Footer = () => {
   return (
-    <footer className="bg-slate-600 dark:bg-indigoIron-600 py-6">
+    <footer className="bg-slate-300 dark:bg-indigoIron-700 py-6 ">
       <div className="max-w-6xl mx-auto font-[sans-serif] text-black dark:text-white ">
         <div className="text-center px-6">
           <h2 className="text-3xl font-extrabold">Contact Me</h2>
-          <p className="text-sm text-white mt-3">
+          <p className="text-sm dark:text-white mt-3">
             Have a great idea and want to make it reality?
           </p>
         </div>
-        <div className="grid lg:grid-cols-3 items-center gap-4 pr-2 pt-2 pb-2 pl-7 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] dark:shadow-lightWater-650 rounded-lg mt-8 ">
+        <div className="grid lg:grid-cols-3 items-center gap-4 pr-2 pt-2 pb-2 pl-7 shadow-sm dark:shadow-lightWater-650 rounded-lg mt-8 bg-indigoIron-500 dark:bg-indigoIron-600 ">
           <div className="bg-indigoIron-700 rounded-lg p-6 max-lg:text-center">
             <h2 className="text-xl font-bold text-white dark:text-white">
               My Information
@@ -124,7 +124,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <button className="flex items-center justify-center text-sm  max-lg:w-full rounded px-4 py-3 font-semibold  text-white   h-12 w-36 shrink-0 hover:bg-lightWater-600 bg-lightWater-650 hover:text-light-text">
+                <button className="flex items-center justify-center text-sm  max-lg:w-full rounded px-4 py-3 font-semibold  text-white   h-12 w-36 shrink-0 hover:bg-cyan-800 bg-cyan-900 ">
                   My Resume
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ const Footer = () => {
               <div className="flex">
                 <button
                   type="button"
-                  className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded px-4 py-2.5 font-semibold bg-gray-800 text-white hover:dark:bg-lightWater-600 dark:bg-lightWater-650 hover:text-light-text"
+                  className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded px-4 py-2.5 font-semibold  text-white hover:bg-cyan-800 bg-cyan-900 "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -207,6 +207,12 @@ const Footer = () => {
             </form>
           </div>
         </div>
+      </div>
+
+      <div className="mt-4 text-center flex justify-center items-center">
+        <span className="text-black dark:text-white">
+          Copyright © 2024 Jesse Little
+        </span>
       </div>
     </footer>
   );
