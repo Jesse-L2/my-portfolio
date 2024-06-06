@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="text-center px-6">
           <h2 className="text-3xl font-extrabold">Contact Me</h2>
           <p className="text-sm text-gray-400 mt-3">
-            Have a great idea to develop and want to make it reality?
+            Have a great idea and want to make it reality?
           </p>
         </div>
         <div className="grid lg:grid-cols-3 items-center gap-4 pr-2 pt-2 pb-2 pl-7 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] dark:shadow-lightWater-650 rounded-lg mt-8 ">
