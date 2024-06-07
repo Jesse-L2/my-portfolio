@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-slate-300 dark:bg-indigoIron-700 py-6 ">
+    <footer className="bg-slate-300 dark:bg-indigoIron-700 py-6">
       <div className="max-w-6xl mx-auto font-[sans-serif] text-black dark:text-white ">
         <div className="text-center px-6">
           <h2 className="text-3xl font-extrabold">Contact Me</h2>
@@ -184,7 +184,7 @@ const Footer = () => {
               <div className="flex">
                 <button
                   type="button"
-                  className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded px-4 py-2.5 font-semibold  text-white hover:bg-cyan-800 bg-cyan-900 "
+                  className="mt-12 flex items-center justify-center text-sm lg:ml-auto max-lg:w-full rounded px-4 py-2.5 font-semibold  text-white hover:bg-cyan-800 bg-cyan-900"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
