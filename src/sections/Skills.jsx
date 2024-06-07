@@ -10,9 +10,12 @@ const Skills = () => {
   );
 
   return (
-    <section className="section skills z-12 dark:bg-dark test_bg" id="skills">
+    <section
+      className="section skills z-12 dark:bg-dark skills_bg "
+      id="skills"
+    >
       <div className="flex justify-center -translate-y-[1px]">
-        <div className="h-1 bg-gradient-to-r from-teal-500 via-violet-500 to-teal-500  w-full" />
+        <div className="h-1 bg-gradient-to-r from-teal-500 via-violet-500 to-teal-500  w-full " />
       </div>
 
       <div className="flex justify-center my-5 lg:py-4">

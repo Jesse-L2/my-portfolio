@@ -8,7 +8,7 @@ const Footer = () => {
             Have a great idea and want to make it reality?
           </p>
         </div>
-        <div className="grid lg:grid-cols-3 items-center gap-4 pr-2 pt-2 pb-2 pl-7 shadow-sm dark:shadow-lightWater-650 rounded-lg mt-8 bg-indigoIron-500 dark:bg-indigoIron-600 ">
+        <div className="grid lg:grid-cols-3 items-center gap-4 pr-2 pt-2 pb-2 pl-7 shadow-sm  rounded-lg mt-8  bg-indigoIron-800">
           <div className="bg-indigoIron-700 rounded-lg p-6 max-lg:text-center">
             <h2 className="text-xl font-bold text-white dark:text-white">
               My Information
