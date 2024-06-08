@@ -19,8 +19,8 @@ const Skills = () => {
       </div>
 
       <div className="flex justify-center my-5 lg:py-4">
-        <div className="flex items-center">
-          <span className=" text-black dark:text-white px-4 text-3xl sm:text-4xl font-bold">
+        <div className="flex items-center bg-white dark:bg-dark">
+          <span className=" blur-0 text-black dark:text-white px-4 text-3xl sm:text-4xl font-bold ">
             My Tools and Skills
           </span>
         </div>
@@ -35,7 +35,7 @@ const Skills = () => {
               pauseOnHover={true}
               delay={0}
               play={true}
-              direction={index === 1 ? "right" : "left"} // Set direction to "right" for the middle Marquee (or every 2nd if more chunks)
+              direction={index === 1 ? "right" : "left"} // Set direction to "right" for the middle Marquee
             >
               {chunk.map((skill) => (
                 <div
