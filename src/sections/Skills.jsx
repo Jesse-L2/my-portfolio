@@ -19,7 +19,7 @@ const Skills = () => {
       </div>
 
       <div className="flex justify-center my-5 lg:py-4">
-        <div className="flex items-center bg-white dark:bg-dark">
+        <div className="flex items-center bg-white dark:bg-dark m-0 p-0">
           <span className=" blur-0 text-black dark:text-white px-4 text-3xl sm:text-4xl font-bold ">
             My Tools and Skills
           </span>
@@ -35,6 +35,7 @@ const Skills = () => {
               pauseOnHover={true}
               delay={0}
               play={true}
+              autoFill={true}
               direction={index === 1 ? "right" : "left"} // Set direction to "right" for the middle Marquee
             >
               {chunk.map((skill) => (
