@@ -67,7 +67,7 @@ const Navigation = () => {
         <motion.div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
           <a href="#" className="flex items-center">
             <img
-              className="rounded-full p-1 m-4 hover:animate-bounce"
+              className="rounded-full p-1 m-4 hover:scale-125 transition 300ms"
               src={hd_Logo}
               alt="Jesse Little Logo"
               width={100}
@@ -94,7 +94,7 @@ const Navigation = () => {
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-lightWater-650 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700 dark:hover:bg-lightMist-800 hover:bg-gray-200 lg:hover:bg-transparent lg:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-lightWater-650 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700  lg:hover:bg-transparent lg:dark:hover:bg-transparent hover:text-lightWater-600"
                   aria-current="page"
                 >
                   Home
@@ -104,7 +104,7 @@ const Navigation = () => {
                 <motion.li key={link.label} variants={menuItemVariants}>
                   <a
                     href={link.href}
-                    className="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-700 hover:bg-gray-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-lightWater-600 lg:p-0 dark:text-gray-100 lg:dark:hover:text-lightWater-600 dark:hover:bg-lightMist-800 dark:hover:text-lightWater-600 lg:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-700  lg:hover:bg-transparent lg:border-0 lg:hover:text-lightWater-600 lg:p-0 dark:text-gray-100   hover:text-lightWater-600 lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     {link.label}
                   </a>

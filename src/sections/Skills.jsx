@@ -20,7 +20,7 @@ const Skills = () => {
 
       <div className="flex justify-center my-5 lg:py-4">
         <div className="flex items-center bg-white dark:bg-dark m-0 p-0">
-          <span className=" blur-0 text-black dark:text-white px-4 text-3xl sm:text-4xl font-bold ">
+          <span className=" blur-0 text-black dark:text-white px-4 text-3xl font-bold sm:text-4xl">
             My Tools and Skills
           </span>
         </div>

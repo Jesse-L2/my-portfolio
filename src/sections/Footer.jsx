@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="bg-slate-300 dark:bg-indigoIron-700 py-6">
       <div className="max-w-6xl mx-auto font-[sans-serif] text-black dark:text-white ">
         <div className="text-center px-6">
-          <h2 className="text-3xl font-extrabold">Contact Me</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">Contact Me</h2>
           <p className="text-sm dark:text-white mt-3">
             Have a great idea and want to make it reality?
           </p>
