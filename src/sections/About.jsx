@@ -1,4 +1,4 @@
-import { UT_Logo } from "../assets/logo";
+// import { UT_Logo } from "../assets/logo";
 const About = () => {
   return (
     <section id="about" className="padding dark:bg-dark ">
@@ -21,6 +21,7 @@ const About = () => {
             className="rounded-full "
           />
         </div>
+        {/* <div className="rotated-background bg-slate-500 "></div> */}
       </div>
       {/* <div className="mt-8 flex flex-col mx-auto max-w-screen-xl">
         <div>
