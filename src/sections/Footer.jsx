@@ -145,7 +145,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="p-6 rounded-xl lg:col-span-2">
-            <form>
+            <form id="contact" method="POST">
               <div className="grid sm:grid-cols-2 gap-8">
                 <div className="relative flex items-center">
                   <input
