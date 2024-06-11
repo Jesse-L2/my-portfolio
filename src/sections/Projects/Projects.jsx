@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="padding text-black  dark:text-white dark:bg-indigoIron-700 bg-slate-300"
+      className="padding text-black  dark:text-white dark:bg-cyan-950 bg-third"
     >
       <div className="mx-auto max-w-screen-xl ">
         <div className="mx-auto max-w-lg text-center">

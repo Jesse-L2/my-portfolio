@@ -49,7 +49,7 @@ const Navigation = () => {
   };
 
   return (
-    <header className="">
+    <header className="bg-main dark:bg-cyan-950">
       <DarkModeSwitch
         className="absolute m-2 top-4 right-7"
         checked={dark}
@@ -59,7 +59,7 @@ const Navigation = () => {
       />
       <motion.nav
         // Navbar background color
-        className=" py-2.5 bg-cyan-100 dark:bg-cyan-950"
+        className=" py-[2px] sm:py-0 "
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
         ref={containerRef}
@@ -88,13 +88,13 @@ const Navigation = () => {
             id="mobile-menu-2"
           >
             <motion.ul
-              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-2xl font-bold font-montserrat pr-4 gap-y-1 gap-x-1"
+              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-2xl font-bold font-montserrat pr-4 gap-y-1 gap-x-1 "
               variants={navVariants}
             >
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-lightWater-650 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700  lg:hover:bg-transparent lg:dark:hover:bg-transparent hover:text-lightWater-600"
+                  className="block py-2 pl-3 pr-4 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700  lg:hover:bg-transparent lg:dark:hover:bg-transparent dark:hover:text-lightWater-600 lg:dark:hover:text-light-text  lg:hover:underline underline-offset-8 decoration-4 text-black hover:text-fourth lg:hover:text-black "
                   aria-current="page"
                 >
                   Home
@@ -104,7 +104,7 @@ const Navigation = () => {
                 <motion.li key={link.label} variants={menuItemVariants}>
                   <a
                     href={link.href}
-                    className="block py-2 pl-3 pr-4 text-gray-800 border-b border-gray-700  lg:hover:bg-transparent lg:border-0 lg:hover:text-lightWater-600 lg:p-0 dark:text-gray-100   hover:text-lightWater-600 lg:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 pl-3 pr-4 text-black border-b border-gray-700  lg:hover:bg-transparent lg:border-0 lg:hover:text-four lg:p-0 dark:text-gray-100   dark:hover:text-lightWater-600 lg:dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 lg:hover:underline underline-offset-8 decoration-4 hover:text-fourth lg:hover:text-black"
                   >
                     {link.label}
                   </a>

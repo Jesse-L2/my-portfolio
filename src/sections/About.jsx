@@ -1,16 +1,16 @@
 // import { UT_Logo } from "../assets/logo";
 const About = () => {
   return (
-    <section id="about" className="padding dark:bg-dark ">
+    <section id="about" className="padding dark:bg-dark bg-second">
       <div className="flex sm:gap-10 gap-4 flex-col sm:flex-row items-center sm:justify-evenly  sm:max-w-[75%] mx-auto">
         <div className="mb-6 sm:mb-0 text-center  sm:w-2/5 w-4/5 ">
           <h1 className="text-5xl sm:text-7xl font-bold font-montserrat">
-            <span className="dark:text-white text-gray-800">Jesse</span>
+            <span className="dark:text-white text-black">Jesse</span>
             <br></br>
-            <span className="dark:text-white text-gray-800 mt-3">Little</span>
+            <span className="dark:text-white text-black mt-3">Little</span>
             <br></br>
           </h1>
-          <h3 className="text-large  font-semibold dark:text-light-text text-lightWater-650 mt-3">
+          <h3 className="text-lg  font-semibold dark:text-light-text text-cyan-950 mt-1">
             Fullstack Developer and Software Engineer
           </h3>
         </div>
