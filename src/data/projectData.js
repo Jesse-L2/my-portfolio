@@ -2,10 +2,18 @@ export const projectData = [
   {
     id: 1,
     title: "Project 1",
-    description:
-      "Project 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+    description: "I built this portfolio. ",
     img: "https://picsum.photos/200/300",
-    tags: ["UI", "Frontend", "React", "Tailwindcss"],
+    tags: [
+      "UI",
+      "Frontend",
+      "React",
+      "Tailwindcss",
+      "Framer Motion",
+      "Javascript",
+      "HTML",
+      "Vite",
+    ],
     link: "www.example.com",
     github: "www.github.com",
   },
