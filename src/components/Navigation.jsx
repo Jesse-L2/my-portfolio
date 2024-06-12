@@ -49,7 +49,7 @@ const Navigation = () => {
   };
 
   return (
-    <header className="bg-mainGreen-300 dark:bg-mainBlue-900">
+    <header className="bg-mainGreen-300 dark:bg-slate-800">
       <DarkModeSwitch
         className="absolute m-2 top-4 right-7"
         checked={dark}
@@ -94,7 +94,7 @@ const Navigation = () => {
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700  lg:hover:bg-transparent lg:dark:hover:bg-transparent dark:hover:text-mainGreen-400 lg:dark:hover:text-light-text  lg:hover:underline underline-offset-8 decoration-4 text-black hover:text-mainBlue-900 lg:hover:text-black "
+                  className="block py-2 pl-3 pr-4 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700  lg:hover:bg-transparent lg:dark:hover:bg-transparent dark:hover:text-mainGreen-400 lg:dark:hover:text-light-text  lg:hover:underline underline-offset-8 decoration-4 text-accent hover:text-mainBlue-900 lg:hover:text-accent "
                   aria-current="page"
                 >
                   Home

@@ -2,7 +2,7 @@ import Contact from "./Contact";
 
 const Footer = () => {
   return (
-    <footer className="bg-mainBlue-300 dark:bg-mainBlue-900 py-6">
+    <footer className="bg-mainBlue-300 dark:bg-slate-800 py-6">
       <div className="max-w-6xl mx-auto font-[sans-serif] text-black dark:text-white ">
         <div className="text-center px-6">
           <h2 className="text-3xl font-bold sm:text-4xl">Contact Me</h2>

@@ -8,7 +8,7 @@ const Path = (props) => (
     stroke={
       document.body.classList.contains("dark")
         ? "hsl(0, 0%, 100%)"
-        : "hsl(0, 0%, 15%)"
+        : "hsl(0, 0%, 0%)"
     }
     strokeLinecap="round"
     {...props}
