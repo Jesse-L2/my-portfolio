@@ -88,23 +88,27 @@ const Navigation = () => {
             id="mobile-menu-2"
           >
             <motion.ul
-              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-2xl font-bold font-montserrat pr-4 gap-y-1 gap-x-1 "
+              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-2xl font-bold font-montserrat pr-4 gap-y-1 gap-x-1"
               variants={navVariants}
             >
               <motion.li variants={menuItemVariants}>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700  lg:hover:bg-transparent lg:dark:hover:bg-transparent dark:hover:text-lightWater-600 lg:dark:hover:text-light-text  lg:hover:underline underline-offset-8 decoration-4 text-black hover:text-fourth lg:hover:text-black "
+                  className="block py-2 pl-3 pr-4 bg-transparent dark:text-light-text lg:p-0 lg:border-0 border-b border-gray-700  lg:hover:bg-transparent lg:dark:hover:bg-transparent dark:hover:text-mainGreen-400 lg:dark:hover:text-light-text  lg:hover:underline underline-offset-8 decoration-4 text-black hover:text-mainBlue-900 lg:hover:text-black "
                   aria-current="page"
                 >
                   Home
                 </a>
               </motion.li>
               {navLinks.map((link) => (
-                <motion.li key={link.label} variants={menuItemVariants}>
+                <motion.li
+                  key={link.label}
+                  variants={menuItemVariants}
+                  className=""
+                >
                   <a
                     href={link.href}
-                    className="block py-2 pl-3 pr-4 text-black border-b border-gray-700  lg:hover:bg-transparent lg:border-0 lg:hover:text-four lg:p-0 dark:text-gray-100   dark:hover:text-lightWater-600 lg:dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 lg:hover:underline underline-offset-8 decoration-4 hover:text-fourth lg:hover:text-black"
+                    className="block py-2 pl-3 pr-4 text-black border-b border-gray-700  lg:hover:bg-transparent lg:border-0 lg:hover:text-four lg:p-0 dark:text-white  dark:hover:text-mainGreen-300 lg:dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 lg:hover:underline underline-offset-8 decoration-4 hover:text-mainBlue-900 lg:hover:text-black "
                   >
                     {link.label}
                   </a>
