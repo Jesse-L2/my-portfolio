@@ -49,7 +49,7 @@ const Navigation = () => {
   };
 
   return (
-    <header className="bg-main dark:bg-cyan-950">
+    <header className="bg-mainGreen-300 dark:bg-mainBlue-900">
       <DarkModeSwitch
         className="absolute m-2 top-4 right-7"
         checked={dark}
