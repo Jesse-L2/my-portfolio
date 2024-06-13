@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="padding-x py-6 text-black dark:text-white dark:bg-slate-800 bg-slate-500 "
+      className="px-6 sm:px-3 py-6 text-black dark:text-white dark:bg-slate-800 bg-slate-500 "
     >
       <div className="mx-auto max-w-screen-xl ">
         <div className="mx-auto max-w-lg text-center">
@@ -19,8 +19,8 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-12 ">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-screen-xl px-2 py-6 sm:px-2 sm:py-12 lg:px-8 lg:py-12 ">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 min-[1200px]:grid-cols-3">
             {projectData.map((project) => (
               <ProjectCard
                 key={project.id}
