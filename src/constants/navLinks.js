@@ -4,5 +4,6 @@ export const navLinks = [
   { href: "#skills", label: "Skills", id: 3 },
   { href: "#projects", label: "Projects", id: 4 },
   { href: "#resume", label: "Resume", id: 5 },
-  { href: "#contact", label: "Contact Me", id: 6 },
+  { href: "https://github.com/Jesse-L2", label: "GitHub", id: 6 },
+  { href: "#contact", label: "Contact Me", id: 7 },
 ];

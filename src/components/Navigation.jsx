@@ -58,13 +58,12 @@ const Navigation = () => {
         moonColor="#feda6a"
       />
       <motion.nav
-        // Navbar background color
-        className=" py-[2px] sm:py-0 "
+        className="py-[2px] sm:py-0"
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
         ref={containerRef}
       >
-        <motion.div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <motion.div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto no-wrap">
           <a href="#" className="flex items-center">
             <img
               className="rounded-full p-1 m-4 hover:scale-125 transition 300ms"
@@ -88,7 +87,7 @@ const Navigation = () => {
             id="mobile-menu-2"
           >
             <motion.ul
-              className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 text-2xl font-bold font-montserrat pr-4 gap-y-1 gap-x-1"
+              className="flex flex-col mt-4 lg:flex-row lg:space-x-6 lg:mt-0 text-[22px] font-bold font-montserrat gap-y-1 "
               variants={navVariants}
             >
               <motion.li variants={menuItemVariants}>

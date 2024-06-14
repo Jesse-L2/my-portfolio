@@ -93,7 +93,7 @@ export default {
         third: "#456990",
         fourth: "#363457",
         fifth: "#D4C5E2",
-        accent: "#3B0D11",
+        accent: "#000",
         "light-bg": "#f2f2e6",
         "dark-bg": "#07020a",
         "gradient-stop-1": "#0d1b2a",
