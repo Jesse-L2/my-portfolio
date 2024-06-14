@@ -19,7 +19,7 @@ export const MenuToggle = ({ isMenuOpen, setIsMenuOpen }) => (
   <button
     data-collapse-toggle="mobile-menu"
     type="button"
-    className="rounded-lg lg:hidden mt-12 mr-4 mb-0 pb-0"
+    className="absolute rounded-lg lg:hidden mt-0 right-9 top-20"
     onClick={() => setIsMenuOpen(!isMenuOpen)}
   >
     <svg width="36" height="36" viewBox="0 0 24 24">

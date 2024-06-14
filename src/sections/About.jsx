@@ -10,7 +10,7 @@ const About = () => {
             <span className="dark:text-white text-black mt-3">Little</span>
             <br></br>
           </h1>
-          <h3 className="text-lg  font-semibold dark:text-light-text text-accent mt-1">
+          <h3 className="text-[16px]  font-semibold dark:text-light-text text-accent mt-1  text-balance line-clamp-2">
             Fullstack Developer and Software Engineer
           </h3>
         </div>

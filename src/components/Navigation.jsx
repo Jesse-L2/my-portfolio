@@ -49,31 +49,29 @@ const Navigation = () => {
   };
 
   return (
-    <header className="bg-mainGreen-300 dark:bg-slate-800">
+    <header className="bg-mainGreen-300 dark:bg-slate-800 min-h-[136px] ">
       <DarkModeSwitch
-        className="absolute m-2 top-4 right-7"
+        className="absolute top-6 right-10"
         checked={dark}
         onChange={() => darkModeHandler()}
         size={32}
         moonColor="#feda6a"
       />
+      <img
+        className={`absolute rounded-full p-0 m-0 hover:scale-110 transition 300ms translate-x-4 translate-y-4 `}
+        src={hd_Logo}
+        alt="Jesse Little Logo"
+        width={96}
+        height={96}
+      />
       <motion.nav
-        className="py-[2px] sm:py-0"
+        className=""
         initial={true}
         animate={isMenuOpen ? "open" : "closed"}
         ref={containerRef}
       >
-        <motion.div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto no-wrap">
-          <a href="#" className="flex items-center">
-            <img
-              className="rounded-full p-1 m-4 hover:scale-125 transition 300ms"
-              src={hd_Logo}
-              alt="Jesse Little Logo"
-              width={100}
-              height={100}
-            />
-          </a>
-          <motion.div className="flex items-center lg:order-2">
+        <motion.div className="flex lg:items-center lg:justify-center lg:content-between  max-w-screen-lg px-0 mx-auto no-wrap">
+          <motion.div className="">
             <span className="sr-only">Open main menu</span>
 
             <MenuToggle
@@ -83,11 +81,11 @@ const Navigation = () => {
             />
           </motion.div>
           <motion.div
-            className="items-center justify-between w-full lg:flex lg:w-auto lg:order-1 mr-16"
-            id="mobile-menu-2"
+            className={` w-full lg:flex lg:justify-center lg:order-1 mr-24 ml-0 lg:mx-0 lg:my-0  lg:translate-x-4  mt-24`}
+            id="menu"
           >
             <motion.ul
-              className="flex flex-col mt-4 lg:flex-row lg:space-x-6 lg:mt-0 text-[22px] font-bold font-montserrat gap-y-1 "
+              className="flex flex-col mt-4 lg:flex-row lg:space-x-6 lg:mt-0 text-2xl font-bold font-montserrat gap-y-1 text-nowrap lg:translate-y-12"
               variants={navVariants}
             >
               <motion.li variants={menuItemVariants}>
