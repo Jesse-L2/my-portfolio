@@ -58,7 +58,7 @@ const Navigation = () => {
         moonColor="#feda6a"
       />
       <img
-        className={`absolute rounded-full p-0 m-0 hover:scale-110 transition 300ms translate-x-4 translate-y-4 `}
+        className={`absolute rounded-full p-0 m-0 hover:scale-110 transition 300ms translate-x-4 translate-y-5 `}
         src={hd_Logo}
         alt="Jesse Little Logo"
         width={96}
@@ -85,7 +85,7 @@ const Navigation = () => {
             id="menu"
           >
             <motion.ul
-              className="flex flex-col mt-4 lg:flex-row lg:space-x-6 lg:mt-0 text-2xl font-bold font-montserrat gap-y-1 text-nowrap lg:translate-y-12"
+              className="flex flex-col mt-4 lg:flex-row lg:space-x-6 lg:mt-0 text-2xl font-bold font-montserrat gap-y-1 text-nowrap lg:translate-y-[50px]"
               variants={navVariants}
             >
               <motion.li variants={menuItemVariants}>
