@@ -9,17 +9,6 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { useState, useEffect, useRef } from "react";
 import "matchmedia-polyfill";
 
-if (
-  (window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches) ||
-  (window.matchMediaPolyfilled &&
-    window.matchMediaPolyfilled("(prefers-color-scheme: dark)").matches)
-) {
-  document.documentElement.classList.add("dark");
-} else {
-  document.documentElement.classList.remove("dark");
-}
-
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
   const containerRef = useRef(null);
