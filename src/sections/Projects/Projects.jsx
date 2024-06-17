@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="px-6 sm:px-3 py-6 text-black dark:text-white dark:bg-slate-800 bg-slate-500 "
+      className="px-6 sm:px-3 py-6 text-black dark:text-white dark:bg-slate-800 bg-blue-300 "
     >
       <div className="mx-auto max-w-screen-xl ">
         <div className="mx-auto max-w-lg text-center">
